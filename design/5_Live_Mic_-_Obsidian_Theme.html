@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#09090b;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 9999px;
+    background: #a78bfa;
+    box-shadow: 0 0 14px rgba(167,139,250,0.7), inset 0 1px 2px rgba(255,255,255,0.7);
+    border: 2px solid #09090b;
+    cursor: pointer;
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border-radius: 9999px;
+    background: #a78bfa;
+    box-shadow: 0 0 14px rgba(167,139,250,0.7), inset 0 1px 2px rgba(255,255,255,0.7);
+    border: 2px solid #09090b;
+    cursor: pointer;
+  }
+  .lavender-slider::-webkit-slider-thumb {
+    background: #c4b5fd !important;
+    box-shadow: 0 0 14px rgba(196,181,253,0.8), inset 0 1px 2px rgba(255,255,255,0.7) !important;
+  }
+  .lavender-slider::-moz-range-thumb {
+    background: #c4b5fd !important;
+    box-shadow: 0 0 14px rgba(196,181,253,0.8), inset 0 1px 2px rgba(255,255,255,0.7) !important;
+  }
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface-container-high": "#18181b",
+          "error": "#ef4444",
+          "on-tertiary-container": "#bbf7d0",
+          "secondary": "#71717a",
+          "surface-tint": "#a78bfa",
+          "surface-container-highest": "#1e1e22",
+          "error-container": "#3b1111",
+          "background": "#09090b",
+          "on-primary-fixed-variant": "#5b21b6",
+          "tertiary-fixed-dim": "#6ee7b7",
+          "surface-variant": "#18181b",
+          "outline": "#52525b",
+          "inverse-surface": "#fafafa",
+          "on-tertiary-fixed": "#003318",
+          "on-background": "#fafafa",
+          "surface-bright": "#18181b",
+          "inverse-on-surface": "#09090b",
+          "on-primary-container": "#ede9fe",
+          "primary": "#a78bfa",
+          "on-error-container": "#fca5a5",
+          "on-surface-variant": "#a1a1aa",
+          "outline-variant": "#27272a",
+          "primary-fixed-dim": "#c4b5fd",
+          "tertiary": "#34d399",
+          "secondary-fixed": "#a1a1aa",
+          "on-error": "#1a0000",
+          "primary-fixed": "#ede9fe",
+          "surface-container": "#121215",
+          "surface-dim": "#0c0c0f",
+          "on-secondary": "#09090b",
+          "on-surface": "#fafafa",
+          "on-primary": "#0a0012",
+          "primary-container": "#7c3aed",
+          "surface-container-lowest": "#09090b",
+          "surface": "#0c0c0f",
+          "on-primary-fixed": "#2e1065",
+          "on-secondary-container": "#a1a1aa",
+          "tertiary-container": "#065f46",
+          "secondary-container": "#27272a",
+          "inverse-primary": "#5b21b6",
+          "on-secondary-fixed-variant": "#3f3f46",
+          "on-secondary-fixed": "#18181b",
+          "tertiary-fixed": "#bbf7d0",
+          "on-tertiary-fixed-variant": "#047857",
+          "secondary-fixed-dim": "#71717a",
+          "on-tertiary": "#001a12",
+          "surface-container-low": "#0f0f12"
+        },
+        fontFamily: {
+          headline: ["Geist", "sans-serif"],
+          display: ["Geist", "sans-serif"],
+          body: ["Geist", "sans-serif"],
+          label: ["Geist", "sans-serif"],
+          mono: ["JetBrains Mono", "monospace"]
+        }
+      }
+    }
+  }
+</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-background text-on-surface font-body antialiased min-h-screen flex flex-col"><header class="fixed top-0 inset-x-0 z-50 bg-background/85 backdrop-blur-xl border-b border-outline-variant/40 shadow-[0_4px_24px_rgba(0,0,0,0.7)] pt-safe"><div class="h-20 px-4 flex items-center justify-between gap-2 max-w-md mx-auto"><div class="flex items-center gap-2.5 min-w-0"><img alt="EchoMic Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XdxHdlRDfH6PC3CC5aK4CfZSSuf7A5dIyifUdTHBLf3qcazD2l_ZOPfRZbbCxhsctKHU38cVtmq2Z2Cm9sMFe1ACXx1W6Odv1_hxaqGoND6bQXZLVJAYagMOq9ulUoe1fCd2ircY-I6bSwdFm-C0Xw860BZxRE8F2FbA_Q_N96SxzRj_q2dqvibeFHqEcRrREqACYH3VCBG64cRwWl3C2Gt3PiQEJlrjWAWETTcMRJE5mkpJdNEY_Dnw"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5"><span class="text-lg font-bold tracking-tight text-on-surface leading-tight truncate">EchoMic Pro</span><span class="text-[10px] font-bold uppercase px-1.5 py-0.5 rounded-full bg-primary/15 text-primary border border-primary/30 tracking-wider">LIVE</span></div><span class="text-[11px] font-mono text-on-surface-variant truncate uppercase tracking-widest leading-none mt-0.5">Live Mic</span></div></div><div class="flex items-center gap-2"><div class="hidden sm:flex items-center bg-surface-container-high px-2.5 py-1 rounded-full gap-2 border border-outline-variant/60 shadow-[inset_0_1px_3px_rgba(0,0,0,0.6)]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary shadow-[0_0_8px_#a78bfa]"></span></span><span class="text-[12px] font-medium text-on-surface truncate max-w-[120px]">JBL PartyBox 310</span><span class="bg-surface-container-lowest text-primary-fixed-dim text-[11px] font-mono px-1.5 py-0.5 rounded border border-outline-variant/50">11ms aptX-LL</span></div><div class="flex sm:hidden items-center bg-surface-container-high px-2 py-1 rounded-full gap-1.5 border border-outline-variant/60 shadow-[inset_0_1px_3px_rgba(0,0,0,0.6)]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary shadow-[0_0_8px_#a78bfa]"></span></span><span class="text-[11px] font-mono text-primary font-bold">11ms</span></div><div class="relative flex-shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxJxtVdvWPHdmb_oP8VFgVRbkXC7gYLWJVC_5mnJmL8qYhGJj8c7iO2jVKUbK1EtPFXXZIcByGhRPqaklTGLEr5GrcCr3354Lk5BdoybQaGNS1tJPIQGKGUkzu0L8Gt5KSqFg_MDgxy6NRuuWb3tkl511L403AVRhyyQsPKnmGREIyLQTJmbhb8RfMAsYjOQHcrJGYalOLG-tKjs-EsdvqFlFnsECmm4zQUdbgbhwHIfFN5DHG3G3t"/><div class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-primary rounded-full ring-2 ring-background"></div></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-24 pb-24 bg-background"><div class="flex flex-col w-full px-4 gap-4 select-none max-w-md mx-auto">
+<!-- Minimal Status Beacon -->
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" id="beacon-ping"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary shadow-[0_0_8px_#a78bfa]" id="beacon-dot"></span>
+</span>
+<span class="text-[11px] font-mono uppercase text-on-surface tracking-wider font-semibold" id="transmitting-text">BROADCASTING TO JBL PARTYBOX 310</span>
+</div>
+<span class="text-[11px] font-mono text-primary-fixed-dim uppercase tracking-wider">9.4ms Latency</span>
+</div>
+<!-- Centerpiece Hero: Large ON AIR Live Mic Station -->
+<div class="relative w-full rounded-2xl bg-surface-container-low p-6 flex flex-col items-center justify-center overflow-hidden shadow-xl border border-outline-variant/40">
+<!-- Background Ambient Glow Ripple -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-45">
+<div class="w-64 h-64 rounded-full bg-primary/20 blur-3xl transition-all duration-500" id="ambient-glow"></div>
+</div>
+<!-- Tactile Hero Button Housing -->
+<div class="relative flex items-center justify-center p-3.5 rounded-full bg-surface-container-lowest shadow-[inset_0_4px_16px_rgba(0,0,0,0.95)] z-10 my-2 border border-outline-variant/30">
+<!-- Outer Glow Ring -->
+<div class="absolute -inset-1 rounded-full bg-primary/25 blur-md transition-all duration-300" id="glow-ring"></div>
+<!-- Tactile Mic Button -->
+<button class="relative group w-44 h-44 rounded-full bg-surface-container-high active:scale-95 transition-all duration-200 flex flex-col items-center justify-center shadow-[0_16px_32px_rgba(0,0,0,0.9),inset_0_2px_4px_rgba(255,255,255,0.12)] focus:outline-none" id="live-mic-btn">
+<div class="absolute inset-2.5 rounded-full border-2 border-primary/70 shadow-[0_0_24px_rgba(167,139,250,0.35)] flex items-center justify-center bg-gradient-to-b from-surface-container-highest to-surface-container transition-colors duration-300" id="button-inner-ring">
+<div class="flex flex-col items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[44px] text-primary transition-transform duration-200 group-hover:scale-110 drop-shadow-[0_0_12px_rgba(167,139,250,0.7)]" id="mic-icon" style="font-variation-settings: 'FILL' 1;">mic</span>
+<span class="text-[22px] tracking-tight text-on-surface font-bold font-headline" id="mic-state-label">ON AIR</span>
+<span class="text-[10px] font-mono text-primary uppercase tracking-widest font-semibold" id="mic-sub-label">TAP TO MUTE</span>
+</div>
+</div>
+</button>
+</div>
+<!-- Dynamic Clean Live Audio Waveform / Meter -->
+<div class="w-full max-w-xs mt-3 z-10 flex items-center justify-center gap-1.5 h-10 px-3 bg-surface-container-lowest rounded-xl shadow-[inset_0_2px_6px_rgba(0,0,0,0.9)] border border-outline-variant/30" id="waveform-box">
+<div class="w-1.5 bg-primary rounded-full animate-pulse h-3 shadow-[0_0_6px_rgba(167,139,250,0.6)]"></div>
+<div class="w-1.5 bg-primary-fixed-dim rounded-full animate-pulse h-6 shadow-[0_0_6px_rgba(196,181,253,0.6)]"></div>
+<div class="w-1.5 bg-primary rounded-full animate-pulse h-8 shadow-[0_0_6px_rgba(167,139,250,0.6)]"></div>
+<div class="w-1.5 bg-primary-fixed-dim rounded-full animate-pulse h-5 shadow-[0_0_6px_rgba(196,181,253,0.6)]"></div>
+<div class="w-1.5 bg-primary rounded-full animate-pulse h-7 shadow-[0_0_6px_rgba(167,139,250,0.6)]"></div>
+<div class="w-1.5 bg-primary rounded-full animate-pulse h-9 shadow-[0_0_8px_rgba(167,139,250,0.8)]"></div>
+<div class="w-1.5 bg-primary-fixed-dim rounded-full animate-pulse h-6 shadow-[0_0_6px_rgba(196,181,253,0.6)]"></div>
+<div class="w-1.5 bg-primary rounded-full animate-pulse h-8 shadow-[0_0_6px_rgba(167,139,250,0.6)]"></div>
+<div class="w-1.5 bg-primary-fixed-dim rounded-full animate-pulse h-4 shadow-[0_0_6px_rgba(196,181,253,0.6)]"></div>
+<div class="w-1.5 bg-primary rounded-full animate-pulse h-9 shadow-[0_0_8px_rgba(167,139,250,0.8)]"></div>
+<div class="w-1.5 bg-primary-fixed-dim rounded-full animate-pulse h-6 shadow-[0_0_6px_rgba(196,181,253,0.6)]"></div>
+<div class="w-1.5 bg-primary rounded-full animate-pulse h-3 shadow-[0_0_6px_rgba(167,139,250,0.6)]"></div>
+</div>
+</div>
+<!-- ESSENTIAL MINIMAL CONTROLS -->
+<div class="flex flex-col gap-3 w-full">
+<!-- Control 1: Master Volume / Gain -->
+<div class="bg-surface-container rounded-xl p-4 shadow-md border border-outline-variant/30 flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">volume_up</span>
+<span class="text-[11px] font-mono uppercase text-on-surface font-bold tracking-wider">Master Volume</span>
+</div>
+<span class="text-[18px] font-mono text-primary font-bold" id="volume-readout">80%</span>
+</div>
+<div class="relative w-full flex items-center py-1">
+<input class="w-full h-2.5 bg-surface-container-lowest rounded-lg appearance-none cursor-pointer accent-[#a78bfa] shadow-[inset_0_1px_3px_rgba(0,0,0,0.8)] focus:outline-none" id="volume-slider" max="100" min="0" type="range" value="80"/>
+</div>
+<div class="flex justify-between text-[11px] font-mono text-on-surface-variant font-medium">
+<span>0%</span>
+<span class="text-secondary">Clean Stage Output</span>
+<span>100%</span>
+</div>
+</div>
+<!-- Control 2: Reverb Slider -->
+<div class="bg-surface-container rounded-xl p-4 shadow-md border border-outline-variant/30 flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed-dim">waves</span>
+<span class="text-[11px] font-mono uppercase text-on-surface font-bold tracking-wider">Karaoke Reverb</span>
+</div>
+<span class="text-[18px] font-mono text-primary-fixed-dim font-bold" id="reverb-readout">40%</span>
+</div>
+<div class="relative w-full flex items-center py-1">
+<input class="lavender-slider w-full h-2.5 bg-surface-container-lowest rounded-lg appearance-none cursor-pointer accent-[#c4b5fd] shadow-[inset_0_1px_3px_rgba(0,0,0,0.8)] focus:outline-none" id="reverb-slider" max="100" min="0" type="range" value="40"/>
+</div>
+<div class="flex justify-between text-[11px] font-mono text-on-surface-variant font-medium">
+<span>Dry</span>
+<span class="text-secondary">Echo Space Depth</span>
+<span>Wet</span>
+</div>
+</div>
+<!-- Control 3: Flanger Effect with Activation Toggle & Slider -->
+<div class="bg-surface-container rounded-xl p-4 shadow-md border border-outline-variant/30 flex flex-col gap-3 transition-opacity duration-200" id="flanger-card">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary border border-outline-variant/40 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6)]">
+<span class="material-symbols-outlined text-[18px]">graphic_eq</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[14px] text-on-surface font-semibold leading-tight">Flanger Effect</span>
+<span class="text-[12px] text-on-surface-variant font-mono" id="flanger-sub">Jet sweep &amp; modulation</span>
+</div>
+</div>
+<!-- Toggle Switch -->
+<button aria-checked="true" class="relative inline-flex h-7 w-12 items-center rounded-full bg-primary-container transition-colors focus:outline-none flex-shrink-0" id="flanger-toggle" role="switch">
+<span class="inline-block h-5 w-5 transform rounded-full bg-on-surface shadow-md transition-transform translate-x-6" id="flanger-thumb"></span>
+</button>
+</div>
+<!-- Flanger Effectiveness Slider -->
+<div class="flex flex-col gap-2 pt-1 transition-all duration-300" id="flanger-slider-container">
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-mono uppercase text-primary font-semibold tracking-wider">SWEEP INTENSITY</span>
+<span class="text-[14px] font-mono text-primary font-bold" id="flanger-readout">50%</span>
+</div>
+<div class="relative w-full flex items-center py-1">
+<input class="lavender-slider w-full h-2.5 bg-surface-container-lowest rounded-lg appearance-none cursor-pointer accent-[#a78bfa] shadow-[inset_0_1px_3px_rgba(0,0,0,0.8)] focus:outline-none" id="flanger-slider" max="100" min="0" type="range" value="50"/>
+</div>
+<div class="flex justify-between text-[11px] font-mono text-on-surface-variant font-medium">
+<span>0% Subtle</span>
+<span>100% Jet Swirl</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // 1. Hero On Air Mic Button Toggle
+    const liveMicBtn = document.getElementById('live-mic-btn');
+    const micIcon = document.getElementById('mic-icon');
+    const micStateLabel = document.getElementById('mic-state-label');
+    const micSubLabel = document.getElementById('mic-sub-label');
+    const glowRing = document.getElementById('glow-ring');
+    const buttonInnerRing = document.getElementById('button-inner-ring');
+    const ambientGlow = document.getElementById('ambient-glow');
+    const beaconDot = document.getElementById('beacon-dot');
+    const beaconPing = document.getElementById('beacon-ping');
+    const transmittingText = document.getElementById('transmitting-text');
+    const waveformBars = document.querySelectorAll('#waveform-box div');
+
+    let isLive = true;
+
+    liveMicBtn.addEventListener('click', () => {
+      isLive = !isLive;
+      if (isLive) {
+        micStateLabel.textContent = 'ON AIR';
+        micStateLabel.className = 'text-[22px] tracking-tight text-on-surface font-bold font-headline';
+        micSubLabel.textContent = 'TAP TO MUTE';
+        micSubLabel.className = 'text-[10px] font-mono text-primary uppercase tracking-widest font-semibold';
+        micIcon.textContent = 'mic';
+        micIcon.className = 'material-symbols-outlined text-[44px] text-primary transition-transform duration-200 group-hover:scale-110 drop-shadow-[0_0_12px_rgba(167,139,250,0.7)]';
+        glowRing.className = 'absolute -inset-1 rounded-full bg-primary/25 blur-md transition-all duration-300';
+        buttonInnerRing.className = 'absolute inset-2.5 rounded-full border-2 border-primary/70 shadow-[0_0_24px_rgba(167,139,250,0.35)] flex items-center justify-center bg-gradient-to-b from-surface-container-highest to-surface-container transition-colors duration-300';
+        ambientGlow.className = 'w-64 h-64 rounded-full bg-primary/20 blur-3xl transition-all duration-500';
+        beaconDot.className = 'relative inline-flex rounded-full h-2.5 w-2.5 bg-primary shadow-[0_0_8px_#a78bfa]';
+        beaconPing.className = 'animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75';
+        transmittingText.textContent = 'BROADCASTING TO JBL PARTYBOX 310';
+        transmittingText.className = 'text-[11px] font-mono uppercase text-on-surface tracking-wider font-semibold';
+        waveformBars.forEach(b => {
+          b.className = b.className.replace('bg-surface-container-highest opacity-40 shadow-none', 'bg-primary shadow-[0_0_6px_rgba(167,139,250,0.6)]');
+        });
+      } else {
+        micStateLabel.textContent = 'MUTED';
+        micStateLabel.className = 'text-[22px] tracking-tight text-error font-bold font-headline';
+        micSubLabel.textContent = 'TAP TO UNMUTE';
+        micSubLabel.className = 'text-[10px] font-mono text-error/80 uppercase tracking-widest font-semibold';
+        micIcon.textContent = 'mic_off';
+        micIcon.className = 'material-symbols-outlined text-[44px] text-error transition-transform duration-200 group-hover:scale-110 drop-shadow-[0_0_12px_rgba(239,68,68,0.5)]';
+        glowRing.className = 'absolute -inset-1 rounded-full bg-error/20 blur-md transition-all duration-300';
+        buttonInnerRing.className = 'absolute inset-2.5 rounded-full border-2 border-error/60 shadow-[0_0_16px_rgba(239,68,68,0.25)] flex items-center justify-center bg-gradient-to-b from-surface-container-highest to-surface-container transition-colors duration-300';
+        ambientGlow.className = 'w-64 h-64 rounded-full bg-error/15 blur-3xl transition-all duration-500';
+        beaconDot.className = 'relative inline-flex rounded-full h-2.5 w-2.5 bg-error shadow-[0_0_8px_#ef4444]';
+        beaconPing.className = 'hidden';
+        transmittingText.textContent = 'MIC MUTED';
+        transmittingText.className = 'text-[11px] font-mono uppercase text-error tracking-wider font-semibold';
+        waveformBars.forEach(b => {
+          b.className = b.className.replace(/bg-primary(-fixed-dim)?.*shadow-\[[^\]]+\]/, 'bg-surface-container-highest opacity-40 shadow-none');
+        });
+      }
+    });
+
+    // 2. Volume Slider Readout
+    const volSlider = document.getElementById('volume-slider');
+    const volReadout = document.getElementById('volume-readout');
+    volSlider.addEventListener('input', (e) => {
+      volReadout.textContent = `${e.target.value}%`;
+    });
+
+    // 3. Reverb Slider Readout
+    const revSlider = document.getElementById('reverb-slider');
+    const revReadout = document.getElementById('reverb-readout');
+    revSlider.addEventListener('input', (e) => {
+      revReadout.textContent = `${e.target.value}%`;
+    });
+
+    // 4. Flanger Toggle & Slider
+    const flangerToggle = document.getElementById('flanger-toggle');
+    const flangerThumb = document.getElementById('flanger-thumb');
+    const flangerSliderContainer = document.getElementById('flanger-slider-container');
+    const flangerSlider = document.getElementById('flanger-slider');
+    const flangerReadout = document.getElementById('flanger-readout');
+    const flangerSub = document.getElementById('flanger-sub');
+    let flangerActive = true;
+
+    flangerToggle.addEventListener('click', () => {
+      flangerActive = !flangerActive;
+      if (flangerActive) {
+        flangerToggle.className = 'relative inline-flex h-7 w-12 items-center rounded-full bg-primary-container transition-colors focus:outline-none flex-shrink-0';
+        flangerThumb.className = 'inline-block h-5 w-5 transform rounded-full bg-on-surface shadow-md transition-transform translate-x-6';
+        flangerSliderContainer.classList.remove('opacity-30', 'pointer-events-none');
+        flangerSlider.disabled = false;
+        flangerSub.textContent = 'Jet sweep & modulation';
+      } else {
+        flangerToggle.className = 'relative inline-flex h-7 w-12 items-center rounded-full bg-secondary-container transition-colors focus:outline-none flex-shrink-0';
+        flangerThumb.className = 'inline-block h-5 w-5 transform rounded-full bg-secondary shadow-md transition-transform translate-x-1';
+        flangerSliderContainer.classList.add('opacity-30', 'pointer-events-none');
+        flangerSlider.disabled = true;
+        flangerSub.textContent = 'Effect bypassed / disabled';
+      }
+    });
+
+    flangerSlider.addEventListener('input', (e) => {
+      flangerReadout.textContent = `${e.target.value}%`;
+    });
+  })();
+</script>
+</main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-background/85 backdrop-blur-xl border-t border-outline-variant/40 shadow-[0_-4px_24px_rgba(0,0,0,0.8)]"><div class="flex justify-around items-center h-20 px-2 max-w-md mx-auto"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-20 h-14 rounded-xl transition-all active:scale-95 text-primary bg-surface-container-high/70 border border-primary/20 shadow-[inset_0_1px_2px_rgba(167,139,250,0.2)]" data-path="live-mic" href="#"><span class="material-symbols-outlined text-[24px]">mic</span><span class="text-[10px] font-mono tracking-wider font-bold">LIVE MIC</span></a><a class="flex flex-col items-center justify-center gap-1 w-20 h-14 rounded-xl text-secondary hover:text-on-surface transition-all active:scale-95" data-path="devices" href="#"><span class="material-symbols-outlined text-[24px]">settings_input_antenna</span><span class="text-[10px] font-mono tracking-wider font-medium">DEVICES</span></a></div></nav>
+</body></html>

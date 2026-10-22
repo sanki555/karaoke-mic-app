@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=JetBrains+Mono:wght@500;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0e141c;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#3a494b", "tertiary-fixed-dim": "#ffb3b5", "on-primary-container": "#006a70", "on-secondary-container": "#fe8bf3", "inverse-primary": "#00696f", "surface": "#0e141c", "surface-container-lowest": "#090f16", "on-primary-fixed": "#002022", "on-error": "#690005", "inverse-surface": "#dde3ee", "on-tertiary": "#680018", "error": "#ffb4ab", "surface-container-low": "#161c24", "surface-bright": "#343a42", "surface-container-highest": "#2f353e", "tertiary-container": "#ffcfd0", "primary-fixed-dim": "#00dce6", "on-tertiary-fixed-variant": "#920026", "surface-container-high": "#242a33", "secondary-container": "#7d137b", "surface-tint": "#00dce6", "tertiary": "#fff5f4", "on-secondary": "#5b005b", "surface-variant": "#2f353e", "secondary-fixed-dim": "#ffabf3", "surface-container": "#1a2028", "on-surface-variant": "#b9cacb", "on-secondary-fixed": "#380038", "surface-dim": "#0e141c", "on-tertiary-fixed": "#40000c", "secondary-fixed": "#ffd7f5", "on-background": "#dde3ee", "on-surface": "#dde3ee", "on-secondary-fixed-variant": "#7d137b", "on-tertiary-container": "#ba1a39", "outline": "#849495", "primary": "#e0fdff", "inverse-on-surface": "#2b3139", "on-primary-fixed-variant": "#004f53", "primary-container": "#00f2fe", "secondary": "#ffabf3", "error-container": "#93000a", "primary-fixed": "#6ff6ff", "on-error-container": "#ffdad6", "background": "#0e141c", "on-primary": "#00373a", "tertiary-fixed": "#ffdada" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.25rem", "gutter-sm": "0.5rem", "space-xl": "2rem", "margin-lg": "1.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1rem" }, "fontFamily": { "body-lg": ["Inter"], "telemetry-md": ["JetBrains Mono"], "headline-lg": ["Space Grotesk"], "headline-xl": ["Space Grotesk"], "headline-xl-mobile": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "label-caps": ["Inter"], "body-sm": ["Inter"], "body-md": ["Inter"], "telemetry-lg": ["JetBrains Mono"], "telemetry-sm": ["JetBrains Mono"] }, "fontSize": { "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "telemetry-md": ["14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-caps": ["10px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "telemetry-lg": ["20px", { "lineHeight": "24px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "telemetry-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.5)] pt-safe"><div class="h-20 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="EchoMic Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XdxHdlRDfH6PC3CC5aK4CfZSSuf7A5dIyifUdTHBLf3qcazD2l_ZOPfRZbbCxhsctKHU38cVtmq2Z2Cm9sMFe1ACXx1W6Odv1_hxaqGoND6bQXZLVJAYagMOq9ulUoe1fCd2ircY-I6bSwdFm-C0Xw860BZxRE8F2FbA_Q_N96SxzRj_q2dqvibeFHqEcRrREqACYH3VCBG64cRwWl3C2Gt3PiQEJlrjWAWETTcMRJE5mkpJdNEY_Dnw"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="text-headline-sm font-headline-sm tracking-tight text-primary leading-tight truncate">EchoMic Pro</span><span class="text-label-caps font-label-caps uppercase px-1 py-0.5 rounded bg-primary-container/20 text-primary-container tracking-wider">LIVE</span></div><span class="text-telemetry-sm font-telemetry-sm text-on-surface-variant truncate uppercase tracking-widest leading-none">Fx Studio</span></div></div><div class="flex items-center gap-space-xs"><div class="hidden sm:flex items-center bg-surface-container-high px-space-sm py-1 rounded-full gap-space-xs shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container shadow-[0_0_8px_#00F2FE]"></span></span><span class="text-telemetry-sm font-telemetry-sm text-on-surface truncate max-w-[120px]">JBL PartyBox 310</span><span class="bg-surface-container-lowest text-primary-fixed-dim text-telemetry-sm font-telemetry-sm px-1.5 py-0.5 rounded">11ms aptX-LL</span></div><div class="flex sm:hidden items-center bg-surface-container-high px-2 py-1 rounded-full gap-1.5 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container shadow-[0_0_8px_#00F2FE]"></span></span><span class="text-telemetry-sm font-telemetry-sm text-primary-fixed-dim font-bold">11ms</span></div><div class="relative flex-shrink-0 pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary-container/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxJxtVdvWPHdmb_oP8VFgVRbkXC7gYLWJVC_5mnJmL8qYhGJj8c7iO2jVKUbK1EtPFXXZIcByGhRPqaklTGLEr5GrcCr3354Lk5BdoybQaGNS1tJPIQGKGUkzu0L8Gt5KSqFg_MDgxy6NRuuWb3tkl511L403AVRhyyQsPKnmGREIyLQTJmbhb8RfMAsYjOQHcrJGYalOLG-tKjs-EsdvqFlFnsECmm4zQUdbgbhwHIfFN5DHG3G3t"/><div class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-primary-container rounded-full ring-2 ring-surface"></div></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-20 bg-surface"><div class="flex flex-col w-full px-margin pb-space-xl gap-space-lg select-none">
+<!-- Top Telemetry & Global DSP Status Strip -->
+<div class="flex items-center justify-between bg-surface-container-low px-space-md py-space-sm rounded-xl">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="flex h-2.5 w-2.5 rounded-full bg-primary-container shadow-[0_0_10px_#00F2FE]"></span>
+<div class="flex flex-col">
+<span class="text-label-caps font-label-caps uppercase text-on-surface-variant tracking-wider">DSP ENGINE</span>
+<span class="text-telemetry-sm font-telemetry-sm text-primary font-bold">24-BIT / 96kHz LIVE</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex flex-col items-end">
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase">CPU LOAD</span>
+<span class="text-telemetry-sm font-telemetry-sm text-primary-fixed-dim">14.2%</span>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface active:scale-95 transition-all" id="fx-master-bypass">
+<span class="material-symbols-outlined text-[16px] text-primary-container">power_settings_new</span>
+<span class="text-label-caps font-label-caps uppercase text-primary">BYPASS</span>
+</button>
+</div>
+</div>
+<!-- SECTION 1: FLANGER MODULATION ENGINE -->
+<div class="flex flex-col bg-surface-container-low rounded-xl p-space-md gap-space-md shadow-md">
+<!-- Header & Toggle Bar -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container text-[20px]">air</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<h2 class="text-headline-sm font-headline-sm text-primary tracking-tight">Flanger LFO Modulator</h2>
+<span class="text-label-caps font-label-caps bg-primary-container/20 text-primary-container px-1 rounded">COMB V2</span>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Through-zero metallic comb filtering &amp; jet sweep</span>
+</div>
+</div>
+<button class="w-11 h-6 rounded-full bg-primary-container p-0.5 flex items-center justify-end transition-all shadow-[0_0_8px_rgba(0,242,254,0.4)]" id="flanger-power">
+<span class="w-5 h-5 rounded-full bg-surface-container-lowest"></span>
+</button>
+</div>
+<!-- Jet-Engine Sweep Phase Visualizer (Live Dual Interactive Waveform) -->
+<div class="relative w-full h-24 bg-surface-container-lowest rounded-xl overflow-hidden p-2 flex flex-col justify-between">
+<div class="flex justify-between items-center z-10">
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase">JET PHASE SWEEP SPECTRUM</span>
+<span class="text-telemetry-sm font-telemetry-sm text-primary-container" id="lfo-telemetry">0.85 Hz [CYCLE 68%]</span>
+</div>
+<!-- Sweep Animation Canvas/SVG -->
+<svg class="w-full h-14 overflow-visible" preserveaspectratio="none" viewbox="0 0 320 60">
+<defs>
+<lineargradient id="flangerGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#00f2fe" stop-opacity="0.1"></stop>
+<stop offset="50%" stop-color="#00f2fe" stop-opacity="0.9"></stop>
+<stop offset="100%" stop-color="#ffabf3" stop-opacity="0.3"></stop>
+</lineargradient>
+</defs>
+<!-- Comb Filter Nodes -->
+<path d="M0,30 Q40,5 80,30 T160,30 T240,30 T320,30" fill="none" stroke="#242a33" stroke-width="1.5"></path>
+<path class="transition-all duration-75" d="M0,30 Q40,8 80,30 T160,30 T240,30 T320,30" fill="none" id="dynamic-comb" stroke="url(#flangerGradient)" stroke-width="2.5"></path>
+<!-- Sweeping Comb Notch Marker -->
+<circle class="fill-primary-container shadow-[0_0_10px_#00F2FE]" cx="160" cy="30" id="flanger-notch" r="4"></circle>
+</svg>
+<div class="flex justify-between items-center z-10 text-label-caps font-label-caps text-on-surface-variant">
+<span>20 Hz</span>
+<span>DELAY ZERO-CROSS</span>
+<span>18.5 kHz</span>
+</div>
+</div>
+<!-- Granular Dials & Knobs Row -->
+<div class="grid grid-cols-2 gap-space-md">
+<!-- Rotary 1: Rate / Frequency LFO -->
+<div class="flex flex-col items-center bg-surface-container rounded-xl p-space-sm gap-1">
+<div class="flex items-center justify-between w-full px-1">
+<span class="text-label-caps font-label-caps uppercase text-on-surface-variant">LFO RATE</span>
+<button class="px-1.5 py-0.5 rounded bg-surface-container-high text-label-caps font-label-caps text-secondary uppercase hover:bg-secondary/20" id="bpm-sync-btn">BPM SYNC</button>
+</div>
+<div class="relative w-20 h-20 flex items-center justify-center my-1">
+<!-- Tactile Rotary Graphic -->
+<svg class="w-full h-full -rotate-90" viewbox="0 0 80 80">
+<circle cx="40" cy="40" fill="transparent" r="32" stroke="#161c24" stroke-width="6"></circle>
+<circle class="transition-all" cx="40" cy="40" fill="transparent" id="rate-arc" r="32" stroke="#00f2fe" stroke-dasharray="201" stroke-dashoffset="130" stroke-linecap="round" stroke-width="6"></circle>
+</svg>
+<div class="absolute inset-2.5 rounded-full bg-surface-container-high flex flex-col items-center justify-center shadow-[inset_0_2px_4px_rgba(0,0,0,0.8)]">
+<span class="text-telemetry-md font-telemetry-md text-primary font-bold" id="rate-val">0.85</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">Hz</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-7 h-7 rounded bg-surface-container-high flex items-center justify-center text-primary-container active:scale-90" onclick="adjustParam('rate', -0.05)">-</button>
+<span class="text-label-caps font-label-caps text-on-surface">SPEED</span>
+<button class="w-7 h-7 rounded bg-surface-container-high flex items-center justify-center text-primary-container active:scale-90" onclick="adjustParam('rate', 0.05)">+</button>
+</div>
+</div>
+<!-- Rotary 2: Resonance / Jet Intensity -->
+<div class="flex flex-col items-center bg-surface-container rounded-xl p-space-sm gap-1">
+<div class="flex items-center justify-between w-full px-1">
+<span class="text-label-caps font-label-caps uppercase text-on-surface-variant">RESONANCE</span>
+<span class="text-label-caps font-label-caps text-secondary-fixed-dim">FEEDBACK</span>
+</div>
+<div class="relative w-20 h-20 flex items-center justify-center my-1">
+<!-- Tactile Rotary Graphic -->
+<svg class="w-full h-full -rotate-90" viewbox="0 0 80 80">
+<circle cx="40" cy="40" fill="transparent" r="32" stroke="#161c24" stroke-width="6"></circle>
+<circle class="transition-all" cx="40" cy="40" fill="transparent" id="reso-arc" r="32" stroke="#ffabf3" stroke-dasharray="201" stroke-dashoffset="60" stroke-linecap="round" stroke-width="6"></circle>
+</svg>
+<div class="absolute inset-2.5 rounded-full bg-surface-container-high flex flex-col items-center justify-center shadow-[inset_0_2px_4px_rgba(0,0,0,0.8)]">
+<span class="text-telemetry-md font-telemetry-md text-secondary font-bold" id="reso-val">72%</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">JET</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-7 h-7 rounded bg-surface-container-high flex items-center justify-center text-secondary active:scale-90" onclick="adjustParam('reso', -5)">-</button>
+<span class="text-label-caps font-label-caps text-on-surface">SWEEP</span>
+<button class="w-7 h-7 rounded bg-surface-container-high flex items-center justify-center text-secondary active:scale-90" onclick="adjustParam('reso', 5)">+</button>
+</div>
+</div>
+</div>
+<!-- Granular Linear Sliders -->
+<div class="flex flex-col gap-space-sm bg-surface-container rounded-xl p-space-sm">
+<!-- Dry/Wet Mix Fader -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="text-label-caps font-label-caps uppercase text-on-surface-variant">DRY / WET BLEND</span>
+<span class="text-telemetry-sm font-telemetry-sm text-primary font-semibold" id="flanger-mix-val">65% WET</span>
+</div>
+<div class="relative h-6 flex items-center">
+<div class="w-full h-2 bg-surface-container-lowest rounded-full overflow-hidden shadow-[inset_0_2px_4px_rgba(0,0,0,0.8)]">
+<div class="h-full bg-primary-container rounded-full shadow-[0_0_8px_#00F2FE]" id="flanger-mix-bar" style="width: 65%;"></div>
+</div>
+<input class="absolute inset-0 opacity-0 cursor-pointer w-full" id="flanger-mix-slider" max="100" min="0" type="range" value="65"/>
+</div>
+</div>
+<!-- Modulation Depth / Width -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="text-label-caps font-label-caps uppercase text-on-surface-variant">MODULATION DEPTH (EXCURSION)</span>
+<span class="text-telemetry-sm font-telemetry-sm text-primary-fixed-dim" id="flanger-depth-val">3.4 ms</span>
+</div>
+<div class="relative h-6 flex items-center">
+<div class="w-full h-2 bg-surface-container-lowest rounded-full overflow-hidden shadow-[inset_0_2px_4px_rgba(0,0,0,0.8)]">
+<div class="h-full bg-primary-container/80 rounded-full" id="flanger-depth-bar" style="width: 58%;"></div>
+</div>
+<input class="absolute inset-0 opacity-0 cursor-pointer w-full" id="flanger-depth-slider" max="100" min="1" type="range" value="58"/>
+</div>
+</div>
+<!-- Manual Delay Offset (Comb filter spacing) -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="text-label-caps font-label-caps uppercase text-on-surface-variant">DELAY OFFSET (COMB NOTCH)</span>
+<span class="text-telemetry-sm font-telemetry-sm text-on-surface font-semibold" id="flanger-offset-val">2.8 ms</span>
+</div>
+<div class="relative h-6 flex items-center">
+<div class="w-full h-2 bg-surface-container-lowest rounded-full overflow-hidden shadow-[inset_0_2px_4px_rgba(0,0,0,0.8)]">
+<div class="h-full bg-secondary-fixed-dim rounded-full shadow-[0_0_6px_#fe8bf3]" id="flanger-offset-bar" style="width: 25%;"></div>
+</div>
+<input class="absolute inset-0 opacity-0 cursor-pointer w-full" id="flanger-offset-slider" max="150" min="5" type="range" value="28"/>
+</div>
+</div>
+<!-- Stereo Phase Spread Selector -->
+<div class="flex items-center justify-between pt-1">
+<span class="text-label-caps font-label-caps uppercase text-on-surface-variant">STEREO PHASE SPREAD</span>
+<div class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded-lg">
+<button class="px-2 py-1 rounded text-label-caps font-label-caps text-on-surface-variant hover:text-on-surface" onclick="setPhase(0, this)">0° MONO</button>
+<button class="px-2 py-1 rounded text-label-caps font-label-caps text-on-surface-variant hover:text-on-surface" onclick="setPhase(90, this)">90° ORBIT</button>
+<button class="px-2 py-1 rounded text-label-caps font-label-caps bg-primary-container text-on-primary-fixed font-bold shadow-[0_0_8px_rgba(0,242,254,0.3)]" onclick="setPhase(180, this)">180° WIDE</button>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: STUDIO REVERB PROCESSOR -->
+<div class="flex flex-col bg-surface-container-low rounded-xl p-space-md gap-space-md shadow-md">
+<!-- Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[20px]">surround_sound</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<h2 class="text-headline-sm font-headline-sm text-secondary tracking-tight">Studio Reverb Matrix</h2>
+<span class="text-label-caps font-label-caps bg-secondary/20 text-secondary px-1 rounded">SPATIAL</span>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Algorithmic convolution acoustic space generator</span>
+</div>
+</div>
+<button class="w-11 h-6 rounded-full bg-secondary p-0.5 flex items-center justify-end transition-all shadow-[0_0_8px_rgba(255,171,243,0.4)]" id="reverb-power">
+<span class="w-5 h-5 rounded-full bg-surface-container-lowest"></span>
+</button>
+</div>
+<!-- Space Type Quick Preset Chips -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+<button class="reverb-chip flex flex-col items-start p-2 rounded-lg bg-surface-container text-left transition-all hover:bg-surface-container-high" onclick="selectReverb('Studio Room', this)">
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase">0.8s DECAY</span>
+<span class="text-body-md font-body-md text-on-surface font-semibold leading-tight">Studio Room</span>
+</button>
+<button class="reverb-chip flex flex-col items-start p-2 rounded-lg bg-surface-container text-left transition-all hover:bg-surface-container-high bg-primary-container/10 border-primary-container shadow-[0_0_8px_rgba(0,242,254,0.15)]" onclick="selectReverb('Karaoke Hall', this)">
+<span class="text-label-caps font-label-caps text-primary-container uppercase font-bold">2.4s DECAY</span>
+<span class="text-body-md font-body-md text-primary font-semibold leading-tight">Karaoke Hall</span>
+</button>
+<button class="reverb-chip flex flex-col items-start p-2 rounded-lg bg-surface-container text-left transition-all hover:bg-surface-container-high" onclick="selectReverb('Arena Stadium', this)">
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase">4.8s DECAY</span>
+<span class="text-body-md font-body-md text-on-surface font-semibold leading-tight">Arena Stadium</span>
+</button>
+<button class="reverb-chip flex flex-col items-start p-2 rounded-lg bg-surface-container text-left transition-all hover:bg-surface-container-high" onclick="selectReverb('Infinite Shimmer', this)">
+<span class="text-label-caps font-label-caps text-secondary-fixed-dim uppercase">8.5s TONE</span>
+<span class="text-body-md font-body-md text-secondary font-semibold leading-tight">Infinite Shimmer</span>
+</button>
+</div>
+<!-- Reverb Decay Time & Early Reflections Grid -->
+<div class="grid grid-cols-2 gap-space-md">
+<!-- Decay Time Knob -->
+<div class="flex flex-col items-center bg-surface-container rounded-xl p-space-sm gap-1">
+<span class="text-label-caps font-label-caps uppercase text-on-surface-variant">DECAY TIME (RT60)</span>
+<div class="relative w-20 h-20 flex items-center justify-center my-1">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 80 80">
+<circle cx="40" cy="40" fill="transparent" r="32" stroke="#161c24" stroke-width="6"></circle>
+<circle cx="40" cy="40" fill="transparent" id="decay-arc" r="32" stroke="#fe8bf3" stroke-dasharray="201" stroke-dashoffset="120" stroke-linecap="round" stroke-width="6"></circle>
+</svg>
+<div class="absolute inset-2.5 rounded-full bg-surface-container-high flex flex-col items-center justify-center shadow-[inset_0_2px_4px_rgba(0,0,0,0.8)]">
+<span class="text-telemetry-md font-telemetry-md text-secondary font-bold" id="decay-val">2.4</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">SEC</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-7 h-7 rounded bg-surface-container-high flex items-center justify-center text-secondary active:scale-90" onclick="adjustDecay(-0.2)">-</button>
+<span class="text-label-caps font-label-caps text-on-surface">TAIL</span>
+<button class="w-7 h-7 rounded bg-surface-container-high flex items-center justify-center text-secondary active:scale-90" onclick="adjustDecay(0.2)">+</button>
+</div>
+</div>
+<!-- Pre-Delay Fader Column -->
+<div class="flex flex-col justify-between bg-surface-container rounded-xl p-space-sm">
+<div class="flex justify-between items-center">
+<span class="text-label-caps font-label-caps uppercase text-on-surface-variant">PRE-DELAY</span>
+<span class="text-telemetry-sm font-telemetry-sm text-primary font-bold" id="predelay-val">28 ms</span>
+</div>
+<div class="flex flex-col gap-1 my-auto">
+<div class="relative h-5 flex items-center">
+<div class="w-full h-2 bg-surface-container-lowest rounded-full overflow-hidden shadow-[inset_0_2px_4px_rgba(0,0,0,0.8)]">
+<div class="h-full bg-primary-container rounded-full" id="predelay-bar" style="width: 28%;"></div>
+</div>
+<input class="absolute inset-0 opacity-0 cursor-pointer w-full" id="predelay-slider" max="100" min="0" type="range" value="28"/>
+</div>
+<span class="text-label-caps font-label-caps text-on-surface-variant text-center">Separates vocal from reflections</span>
+</div>
+<div class="flex justify-between text-label-caps font-label-caps text-on-surface-variant">
+<span>0ms</span>
+<span>50ms</span>
+<span>100ms</span>
+</div>
+</div>
+</div>
+<!-- Reverb Mix and Damping Sliders -->
+<div class="flex flex-col gap-space-sm bg-surface-container rounded-xl p-space-sm">
+<!-- Reverb Mix Fader (Currently 40%) -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="text-label-caps font-label-caps uppercase text-on-surface-variant">REVERB WET MIX</span>
+<span class="text-telemetry-sm font-telemetry-sm text-secondary font-bold" id="reverb-mix-val">40%</span>
+</div>
+<div class="relative h-6 flex items-center">
+<div class="w-full h-2.5 bg-surface-container-lowest rounded-full overflow-hidden shadow-[inset_0_2px_4px_rgba(0,0,0,0.8)]">
+<div class="h-full bg-secondary rounded-full shadow-[0_0_8px_#ffabf3]" id="reverb-mix-bar" style="width: 40%;"></div>
+</div>
+<input class="absolute inset-0 opacity-0 cursor-pointer w-full" id="reverb-mix-slider" max="100" min="0" type="range" value="40"/>
+</div>
+</div>
+<!-- HF Damping / Roll-off -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="text-label-caps font-label-caps uppercase text-on-surface-variant">HIGH FREQUENCY DAMPING</span>
+<span class="text-telemetry-sm font-telemetry-sm text-primary-fixed-dim" id="damping-val">5.8 kHz</span>
+</div>
+<div class="relative h-6 flex items-center">
+<div class="w-full h-2 bg-surface-container-lowest rounded-full overflow-hidden shadow-[inset_0_2px_4px_rgba(0,0,0,0.8)]">
+<div class="h-full bg-primary-fixed-dim rounded-full" id="damping-bar" style="width: 62%;"></div>
+</div>
+<input class="absolute inset-0 opacity-0 cursor-pointer w-full" id="damping-slider" max="100" min="1" type="range" value="62"/>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 3: PITCH CORRECTION & HARMONY QUICK BAR -->
+<div class="flex flex-col bg-surface-container-low rounded-xl p-space-md gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[20px]">music_note</span>
+<div class="flex flex-col">
+<h3 class="text-headline-sm font-headline-sm text-on-surface leading-tight">Live Pitch &amp; Harmony</h3>
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase">WARM GLIDE TRACKING</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="text-telemetry-sm font-telemetry-sm text-primary font-bold">KEY: C# MINOR</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-space-sm pt-1">
+<button class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all">
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase">CORRECTION</span>
+<span class="text-telemetry-md font-telemetry-md text-primary font-bold">85% HARD</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all">
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase">PITCH GLIDE</span>
+<span class="text-telemetry-md font-telemetry-md text-primary-fixed-dim font-bold">12 ms</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all">
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase">VOICING</span>
+<span class="text-telemetry-md font-telemetry-md text-secondary font-bold">+3rd OCT</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Simple state machine for micro-interactions and tactile visual updates
+  let state = {
+    flangerActive: true,
+    reverbActive: true,
+    rate: 0.85,
+    reso: 72,
+    flangerMix: 65,
+    decay: 2.4,
+    notchX: 160
+  };
+
+  // Connect Slider Handlers
+  const mixSlider = document.getElementById('flanger-mix-slider');
+  const mixBar = document.getElementById('flanger-mix-bar');
+  const mixVal = document.getElementById('flanger-mix-val');
+  if (mixSlider) {
+    mixSlider.addEventListener('input', (e) => {
+      const v = e.target.value;
+      mixBar.style.width = v + '%';
+      mixVal.textContent = v + '% WET';
+    });
+  }
+
+  const depthSlider = document.getElementById('flanger-depth-slider');
+  const depthBar = document.getElementById('flanger-depth-bar');
+  const depthVal = document.getElementById('flanger-depth-val');
+  if (depthSlider) {
+    depthSlider.addEventListener('input', (e) => {
+      const v = e.target.value;
+      depthBar.style.width = v + '%';
+      depthVal.textContent = (v * 0.06).toFixed(1) + ' ms';
+    });
+  }
+
+  const offsetSlider = document.getElementById('flanger-offset-slider');
+  const offsetBar = document.getElementById('flanger-offset-bar');
+  const offsetVal = document.getElementById('flanger-offset-val');
+  if (offsetSlider) {
+    offsetSlider.addEventListener('input', (e) => {
+      const v = e.target.value;
+      offsetBar.style.width = (v / 1.5) + '%';
+      offsetVal.textContent = (v / 10).toFixed(1) + ' ms';
+    });
+  }
+
+  const reverbSlider = document.getElementById('reverb-mix-slider');
+  const reverbBar = document.getElementById('reverb-mix-bar');
+  const reverbVal = document.getElementById('reverb-mix-val');
+  if (reverbSlider) {
+    reverbSlider.addEventListener('input', (e) => {
+      const v = e.target.value;
+      reverbBar.style.width = v + '%';
+      reverbVal.textContent = v + '%';
+    });
+  }
+
+  const predelaySlider = document.getElementById('predelay-slider');
+  const predelayBar = document.getElementById('predelay-bar');
+  const predelayVal = document.getElementById('predelay-val');
+  if (predelaySlider) {
+    predelaySlider.addEventListener('input', (e) => {
+      const v = e.target.value;
+      predelayBar.style.width = v + '%';
+      predelayVal.textContent = v + ' ms';
+    });
+  }
+
+  const dampingSlider = document.getElementById('damping-slider');
+  const dampingBar = document.getElementById('damping-bar');
+  const dampingVal = document.getElementById('damping-val');
+  if (dampingSlider) {
+    dampingSlider.addEventListener('input', (e) => {
+      const v = e.target.value;
+      dampingBar.style.width = v + '%';
+      dampingVal.textContent = (2 + (v * 0.12)).toFixed(1) + ' kHz';
+    });
+  }
+
+  // Parameter step buttons
+  function adjustParam(type, delta) {
+    if (type === 'rate') {
+      state.rate = Math.max(0.1, Math.min(10.0, state.rate + delta));
+      document.getElementById('rate-val').textContent = state.rate.toFixed(2);
+      const arc = document.getElementById('rate-arc');
+      const offset = 201 - (201 * (state.rate / 10));
+      arc.style.strokeDashoffset = offset;
+    } else if (type === 'reso') {
+      state.reso = Math.max(0, Math.min(95, state.reso + delta));
+      document.getElementById('reso-val').textContent = state.reso + '%';
+      const arc = document.getElementById('reso-arc');
+      const offset = 201 - (201 * (state.reso / 100));
+      arc.style.strokeDashoffset = offset;
+    }
+  }
+
+  function adjustDecay(delta) {
+    state.decay = Math.max(0.2, Math.min(8.5, state.decay + delta));
+    document.getElementById('decay-val').textContent = state.decay.toFixed(1);
+    const arc = document.getElementById('decay-arc');
+    const offset = 201 - (201 * (state.decay / 8.5));
+    arc.style.strokeDashoffset = offset;
+  }
+
+  function setPhase(deg, btn) {
+    const parent = btn.parentElement;
+    parent.querySelectorAll('button').forEach(b => {
+      b.className = 'px-2 py-1 rounded text-label-caps font-label-caps text-on-surface-variant hover:text-on-surface';
+    });
+    btn.className = 'px-2 py-1 rounded text-label-caps font-label-caps bg-primary-container text-on-primary-fixed font-bold shadow-[0_0_8px_rgba(0,242,254,0.3)]';
+  }
+
+  function selectReverb(type, btn) {
+    document.querySelectorAll('.reverb-chip').forEach(c => {
+      c.className = 'reverb-chip flex flex-col items-start p-2 rounded-lg bg-surface-container text-left transition-all hover:bg-surface-container-high';
+    });
+    btn.className = 'reverb-chip flex flex-col items-start p-2 rounded-lg bg-primary-container/10 text-left transition-all shadow-[0_0_8px_rgba(0,242,254,0.15)]';
+    
+    // Auto-adjust decay based on space
+    if (type === 'Studio Room') state.decay = 0.8;
+    else if (type === 'Karaoke Hall') state.decay = 2.4;
+    else if (type === 'Arena Stadium') state.decay = 4.8;
+    else if (type === 'Infinite Shimmer') state.decay = 8.5;
+    
+    document.getElementById('decay-val').textContent = state.decay.toFixed(1);
+    const arc = document.getElementById('decay-arc');
+    if (arc) arc.style.strokeDashoffset = 201 - (201 * (state.decay / 8.5));
+  }
+
+  // Toggles
+  const flangerPower = document.getElementById('flanger-power');
+  if (flangerPower) {
+    flangerPower.addEventListener('click', () => {
+      state.flangerActive = !state.flangerActive;
+      flangerPower.className = state.flangerActive 
+        ? 'w-11 h-6 rounded-full bg-primary-container p-0.5 flex items-center justify-end transition-all shadow-[0_0_8px_rgba(0,242,254,0.4)]'
+        : 'w-11 h-6 rounded-full bg-surface-container-highest p-0.5 flex items-center justify-start transition-all';
+    });
+  }
+
+  const reverbPower = document.getElementById('reverb-power');
+  if (reverbPower) {
+    reverbPower.addEventListener('click', () => {
+      state.reverbActive = !state.reverbActive;
+      reverbPower.className = state.reverbActive 
+        ? 'w-11 h-6 rounded-full bg-secondary p-0.5 flex items-center justify-end transition-all shadow-[0_0_8px_rgba(255,171,243,0.4)]'
+        : 'w-11 h-6 rounded-full bg-surface-container-highest p-0.5 flex items-center justify-start transition-all';
+    });
+  }
+
+  // Animated Jet Engine Comb Filter Wave Sweep
+  let phaseAngle = 0;
+  function animateJetSweep() {
+    if (state.flangerActive) {
+      phaseAngle += 0.04 * state.rate;
+      const notchX = 160 + Math.sin(phaseAngle) * 110;
+      const notchNode = document.getElementById('flanger-notch');
+      const pathNode = document.getElementById('dynamic-comb');
+      if (notchNode && pathNode) {
+        notchNode.setAttribute('cx', notchX);
+        const yOffset = 15 + Math.cos(phaseAngle) * 12;
+        pathNode.setAttribute('d', `M0,30 Q${notchX / 2},${yOffset} ${notchX},30 T${Math.min(320, notchX * 1.5)},30 T320,30`);
+      }
+    }
+    requestAnimationFrame(animateJetSweep);
+  }
+  animateJetSweep();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.6)]" data-active-classes="text-primary-container bg-surface-container-high/60 shadow-[inset_0_1px_2px_rgba(0,242,254,0.15)]"><div class="flex justify-around items-center h-20 px-space-xs"><a class="flex flex-col items-center justify-center gap-1 w-16 h-14 rounded-xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="live-mic" href="#"><span class="material-symbols-outlined text-[24px]">mic</span><span class="text-label-caps font-label-caps tracking-wider">LIVE MIC</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-14 rounded-xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="equalizer" href="#"><span class="material-symbols-outlined text-[24px]">equalizer</span><span class="text-label-caps font-label-caps tracking-wider">EQUALIZER</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-16 h-14 rounded-xl transition-all active:scale-95 text-primary-container bg-surface-container-high/60 shadow-[inset_0_1px_2px_rgba(0,242,254,0.15)]" data-path="fx-studio" href="#"><span class="material-symbols-outlined text-[24px]">graphic_eq</span><span class="text-label-caps font-label-caps tracking-wider">FX STUDIO</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-14 rounded-xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="devices" href="#"><span class="material-symbols-outlined text-[24px]">settings_input_antenna</span><span class="text-label-caps font-label-caps tracking-wider">DEVICES</span></a></div></nav></body></html>

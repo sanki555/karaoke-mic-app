@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=JetBrains+Mono:wght@500;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0e141c;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#3a494b", "tertiary-fixed-dim": "#ffb3b5", "on-primary-container": "#006a70", "on-secondary-container": "#fe8bf3", "inverse-primary": "#00696f", "surface": "#0e141c", "surface-container-lowest": "#090f16", "on-primary-fixed": "#002022", "on-error": "#690005", "inverse-surface": "#dde3ee", "on-tertiary": "#680018", "error": "#ffb4ab", "surface-container-low": "#161c24", "surface-bright": "#343a42", "surface-container-highest": "#2f353e", "tertiary-container": "#ffcfd0", "primary-fixed-dim": "#00dce6", "on-tertiary-fixed-variant": "#920026", "surface-container-high": "#242a33", "secondary-container": "#7d137b", "surface-tint": "#00dce6", "tertiary": "#fff5f4", "on-secondary": "#5b005b", "surface-variant": "#2f353e", "secondary-fixed-dim": "#ffabf3", "surface-container": "#1a2028", "on-surface-variant": "#b9cacb", "on-secondary-fixed": "#380038", "surface-dim": "#0e141c", "on-tertiary-fixed": "#40000c", "secondary-fixed": "#ffd7f5", "on-background": "#dde3ee", "on-surface": "#dde3ee", "on-secondary-fixed-variant": "#7d137b", "on-tertiary-container": "#ba1a39", "outline": "#849495", "primary": "#e0fdff", "inverse-on-surface": "#2b3139", "on-primary-fixed-variant": "#004f53", "primary-container": "#00f2fe", "secondary": "#ffabf3", "error-container": "#93000a", "primary-fixed": "#6ff6ff", "on-error-container": "#ffdad6", "background": "#0e141c", "on-primary": "#00373a", "tertiary-fixed": "#ffdada" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.25rem", "gutter-sm": "0.5rem", "space-xl": "2rem", "margin-lg": "1.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1rem" }, "fontFamily": { "body-lg": ["Inter"], "telemetry-md": ["JetBrains Mono"], "headline-lg": ["Space Grotesk"], "headline-xl": ["Space Grotesk"], "headline-xl-mobile": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "label-caps": ["Inter"], "body-sm": ["Inter"], "body-md": ["Inter"], "telemetry-lg": ["JetBrains Mono"], "telemetry-sm": ["JetBrains Mono"] }, "fontSize": { "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "telemetry-md": ["14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-caps": ["10px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "telemetry-lg": ["20px", { "lineHeight": "24px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "telemetry-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.5)] pt-safe"><div class="h-20 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="EchoMic Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XdxHdlRDfH6PC3CC5aK4CfZSSuf7A5dIyifUdTHBLf3qcazD2l_ZOPfRZbbCxhsctKHU38cVtmq2Z2Cm9sMFe1ACXx1W6Odv1_hxaqGoND6bQXZLVJAYagMOq9ulUoe1fCd2ircY-I6bSwdFm-C0Xw860BZxRE8F2FbA_Q_N96SxzRj_q2dqvibeFHqEcRrREqACYH3VCBG64cRwWl3C2Gt3PiQEJlrjWAWETTcMRJE5mkpJdNEY_Dnw"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="text-headline-sm font-headline-sm tracking-tight text-primary leading-tight truncate">EchoMic Pro</span><span class="text-label-caps font-label-caps uppercase px-1 py-0.5 rounded bg-primary-container/20 text-primary-container tracking-wider">LIVE</span></div><span class="text-telemetry-sm font-telemetry-sm text-on-surface-variant truncate uppercase tracking-widest leading-none">Devices</span></div></div><div class="flex items-center gap-space-xs"><div class="hidden sm:flex items-center bg-surface-container-high px-space-sm py-1 rounded-full gap-space-xs shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container shadow-[0_0_8px_#00F2FE]"></span></span><span class="text-telemetry-sm font-telemetry-sm text-on-surface truncate max-w-[120px]">JBL PartyBox 310</span><span class="bg-surface-container-lowest text-primary-fixed-dim text-telemetry-sm font-telemetry-sm px-1.5 py-0.5 rounded">11ms aptX-LL</span></div><div class="flex sm:hidden items-center bg-surface-container-high px-2 py-1 rounded-full gap-1.5 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container shadow-[0_0_8px_#00F2FE]"></span></span><span class="text-telemetry-sm font-telemetry-sm text-primary-fixed-dim font-bold">11ms</span></div><div class="relative flex-shrink-0 pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary-container/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxJxtVdvWPHdmb_oP8VFgVRbkXC7gYLWJVC_5mnJmL8qYhGJj8c7iO2jVKUbK1EtPFXXZIcByGhRPqaklTGLEr5GrcCr3354Lk5BdoybQaGNS1tJPIQGKGUkzu0L8Gt5KSqFg_MDgxy6NRuuWb3tkl511L403AVRhyyQsPKnmGREIyLQTJmbhb8RfMAsYjOQHcrJGYalOLG-tKjs-EsdvqFlFnsECmm4zQUdbgbhwHIfFN5DHG3G3t"/><div class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-primary-container rounded-full ring-2 ring-surface"></div></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-20 bg-surface"><div class="flex flex-col w-full pb-10 space-y-space-md">
+<!-- Top Monitor / Primary Node Card -->
+<div class="px-margin pt-space-sm">
+<div class="bg-surface-container-high rounded-xl p-space-md shadow-xl relative overflow-hidden">
+<!-- Glow ambient backdrop -->
+<div class="absolute -right-10 -top-10 w-44 h-44 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Header row: Status & Type -->
+<div class="flex items-center justify-between mb-space-sm relative z-10">
+<div class="flex items-center gap-space-xs">
+<span class="flex h-2.5 w-2.5 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary-container"></span>
+</span>
+<span class="text-label-caps font-label-caps uppercase tracking-wider text-primary-fixed-dim">Active Master Sink</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="bg-surface-container-lowest text-primary-container text-label-caps font-label-caps uppercase px-2 py-0.5 rounded-full font-bold shadow-inner">
+            BT 5.3 LE Audio
+          </span>
+</div>
+</div>
+<!-- Device Identity -->
+<div class="flex items-start justify-between relative z-10 mb-space-md">
+<div class="min-w-0 pr-space-xs">
+<h2 class="text-headline-sm font-headline-sm text-primary tracking-tight truncate">JBL PartyBox Stage 320</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">Assigned Output Bus: Ch 1-2 (Master Stereo)</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary-container shadow-inner flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">speaker</span>
+</div>
+</div>
+<!-- Diagnostic Telemetry Bar -->
+<div class="grid grid-cols-3 gap-space-xs bg-surface-container-lowest p-space-sm rounded-lg relative z-10 shadow-inner">
+<!-- Signal Metric -->
+<div class="flex flex-col">
+<span class="text-label-caps font-label-caps uppercase text-on-surface-variant">Signal</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[16px]">signal_cellular_alt</span>
+<span class="text-telemetry-sm font-telemetry-sm text-on-surface font-semibold">-42 dBm</span>
+</div>
+<span class="text-label-caps font-label-caps text-primary-fixed-dim tracking-tight">Excellent</span>
+</div>
+<!-- Battery Metric -->
+<div class="flex flex-col">
+<span class="text-label-caps font-label-caps uppercase text-on-surface-variant">Power</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[16px]">battery_5_bar</span>
+<span class="text-telemetry-sm font-telemetry-sm text-on-surface font-semibold">88%</span>
+</div>
+<span class="text-label-caps font-label-caps text-on-surface-variant tracking-tight">~9.5h left</span>
+</div>
+<!-- Codec / Profile -->
+<div class="flex flex-col">
+<span class="text-label-caps font-label-caps uppercase text-on-surface-variant">Active Codec</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">spatial_audio</span>
+<span class="text-telemetry-sm font-telemetry-sm text-secondary font-semibold">LDAC</span>
+</div>
+<span class="text-label-caps font-label-caps text-on-surface-variant tracking-tight">96kHz / 24-bit</span>
+</div>
+</div>
+<!-- Connection Actions -->
+<div class="mt-space-md pt-space-xs flex items-center justify-between gap-space-sm relative z-10">
+<button class="flex-1 py-2 px-space-sm bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface rounded-lg text-telemetry-sm font-telemetry-sm transition-all active:scale-[0.98] flex items-center justify-center gap-1.5 shadow-sm" id="disconnect-btn">
+<span class="material-symbols-outlined text-[16px]">power_settings_new</span>
+<span>Disconnect</span>
+</button>
+<button class="flex-1 py-2 px-space-sm bg-primary-container/15 hover:bg-primary-container/25 text-primary-container rounded-lg text-telemetry-sm font-telemetry-sm transition-all active:scale-[0.98] flex items-center justify-center gap-1.5 shadow-sm font-medium" id="test-tone-btn">
+<span class="material-symbols-outlined text-[16px]">volume_up</span>
+<span id="tone-label">Ping Tone</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Audio Routing Topology Pill Switch -->
+<div class="px-margin">
+<div class="bg-surface-container-lowest p-1 rounded-xl flex items-center gap-1 shadow-inner">
+<button class="flex-1 py-2 rounded-lg text-telemetry-sm font-telemetry-sm tracking-wide transition-all bg-surface-container-high text-primary-container shadow-sm flex items-center justify-center gap-1.5" id="mode-single">
+<span class="material-symbols-outlined text-[18px]">speaker</span>
+<span>Single Master</span>
+</button>
+<button class="flex-1 py-2 rounded-lg text-telemetry-sm font-telemetry-sm tracking-wide transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5" id="mode-auracast">
+<span class="material-symbols-outlined text-[18px]">cell_tower</span>
+<span>Auracast™ Broadcast</span>
+<span class="bg-secondary/20 text-secondary text-label-caps font-label-caps px-1 py-0.2 rounded uppercase">Party</span>
+</button>
+</div>
+</div>
+<!-- Latency Offset & Precision Calibration Stage -->
+<div class="px-margin space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[18px]">tune</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Time Alignment</h3>
+</div>
+<span class="text-label-caps font-label-caps uppercase text-on-surface-variant tracking-widest">DSP STAGE 01</span>
+</div>
+<div class="bg-surface-container rounded-xl p-space-md shadow-md space-y-space-md">
+<!-- Readout and Dial-like telemetry -->
+<div class="flex items-center justify-between">
+<div>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Manual Phase &amp; Delay Offset</span>
+<p class="text-label-caps font-label-caps text-on-surface-variant/70">Compensates backing track vs acoustic voice</p>
+</div>
+<div class="bg-surface-container-lowest px-3 py-1.5 rounded-lg shadow-inner flex items-baseline gap-1">
+<span class="text-telemetry-lg font-telemetry-lg text-primary-container font-bold" id="latency-val">+18</span>
+<span class="text-telemetry-sm font-telemetry-sm text-primary-fixed-dim">ms</span>
+</div>
+</div>
+<!-- Sunken Studio Fader / Linear Slider -->
+<div class="space-y-space-xs">
+<div class="relative w-full py-2">
+<!-- Inset Track Trough -->
+<div class="h-2 w-full bg-surface-container-lowest rounded-full relative overflow-hidden shadow-inner">
+<!-- Center zero marker -->
+<div class="absolute left-1/4 top-0 bottom-0 w-0.5 bg-outline-variant/60"></div>
+<!-- Dynamic fill -->
+<div class="h-full bg-primary-container/80 transition-all rounded-full" id="slider-fill" style="width: 34%;"></div>
+</div>
+<!-- Custom Slider Input Native Overlay for perfect touch interaction -->
+<input class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" id="latency-range" max="150" min="-50" type="range" value="18"/>
+</div>
+<div class="flex justify-between items-center text-label-caps font-label-caps text-on-surface-variant">
+<span>-50ms (Lead)</span>
+<span class="text-primary-fixed-dim font-bold">0ms (Direct)</span>
+<span>+150ms (Lag)</span>
+</div>
+</div>
+<!-- Acoustic Chirp Diagnostic Action Card -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between gap-space-sm shadow-inner">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container transition-transform" id="chirp-icon-wrap">
+<span class="material-symbols-outlined text-[20px]">hearing</span>
+</div>
+<div class="min-w-0">
+<span class="text-body-md font-body-md text-on-surface font-medium block truncate">Acoustic Chirp Auto-Sync</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant block truncate" id="chirp-status">Ears open • Ready for diagnostic ping</span>
+</div>
+</div>
+<button class="bg-primary-container text-on-primary-container px-3 py-2 rounded-lg text-telemetry-sm font-telemetry-sm font-bold shadow-md hover:bg-primary-fixed-dim transition-all active:scale-95 flex-shrink-0" id="chirp-btn">
+          Calibrate
+        </button>
+</div>
+<!-- Buffer Size Segmented Control -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="text-label-caps font-label-caps uppercase text-on-surface-variant tracking-wider">I/O Frame Buffer</span>
+<span class="text-telemetry-sm font-telemetry-sm text-primary-container font-mono">Total Roundtrip: 11.2ms</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs">
+<!-- Option 1 -->
+<button class="buffer-btn py-2 px-1.5 bg-surface-container-lowest hover:bg-surface-container-highest rounded-lg flex flex-col items-center transition-all shadow-inner text-left" data-buffer="64">
+<span class="text-telemetry-sm font-telemetry-sm font-bold text-on-surface">64 Spl</span>
+<span class="text-label-caps font-label-caps text-primary-fixed-dim">4.2ms • Ultra</span>
+</button>
+<!-- Option 2 (Active) -->
+<button class="buffer-btn py-2 px-1.5 bg-primary-container/20 rounded-lg flex flex-col items-center transition-all shadow-[inset_0_1px_2px_rgba(0,242,254,0.3)] text-left" data-buffer="128">
+<span class="text-telemetry-sm font-telemetry-sm font-bold text-primary-container">128 Spl</span>
+<span class="text-label-caps font-label-caps text-primary">8.5ms • Stable</span>
+</button>
+<!-- Option 3 -->
+<button class="buffer-btn py-2 px-1.5 bg-surface-container-lowest hover:bg-surface-container-highest rounded-lg flex flex-col items-center transition-all shadow-inner text-left" data-buffer="256">
+<span class="text-telemetry-sm font-telemetry-sm font-bold text-on-surface">256 Spl</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">16ms • Studio</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Hardware Microphone Input Selector Card -->
+<div class="px-margin space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[18px]">mic_double</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Vocal Ingestion</h3>
+</div>
+<span class="text-label-caps font-label-caps uppercase text-primary-fixed-dim tracking-widest">32-BIT FLOAT</span>
+</div>
+<div class="bg-surface-container rounded-xl p-space-md shadow-md space-y-space-md">
+<!-- Input Source Selector -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary-fixed-dim shadow-inner flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">settings_voice</span>
+</div>
+<div class="min-w-0">
+<span class="text-body-md font-body-md text-on-surface font-semibold block truncate">Built-in Quad Mic Array</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant block truncate">Beamforming Cardioid • 48 kHz</span>
+</div>
+</div>
+<button class="p-2 bg-surface-container-low hover:bg-surface-container-highest text-on-surface-variant rounded-lg transition-all active:scale-95 shadow-sm" id="mic-switch-btn">
+<span class="material-symbols-outlined text-[20px]">swap_horiz</span>
+</button>
+</div>
+<!-- Real-time Input Gate / Noise Cancellation Toggle -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between shadow-inner">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">noise_control_off</span>
+<div class="min-w-0">
+<span class="text-body-sm font-body-sm text-on-surface font-medium block">AI Spectral Denoise</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant block">Suppresses PA bleed &amp; room echo</span>
+</div>
+</div>
+<!-- Toggle Switch -->
+<button class="w-12 h-6 rounded-full bg-secondary-container transition-colors relative flex items-center p-0.5 active:scale-95 flex-shrink-0" id="denoise-toggle">
+<span class="sr-only">Toggle AI Spectral Denoise</span>
+<div class="w-5 h-5 rounded-full bg-secondary shadow-md transform translate-x-6 transition-transform" id="denoise-thumb"></div>
+</button>
+</div>
+</div>
+</div>
+<!-- Discovered Audio Nodes & Available Speakers -->
+<div class="px-margin space-y-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">radar</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Nearby Bluetooth Sinks</h3>
+</div>
+<button class="flex items-center gap-1 text-label-caps font-label-caps text-primary-container uppercase tracking-wider hover:text-primary transition-colors py-1 px-2 rounded-md hover:bg-surface-container" id="refresh-devices-btn">
+<span class="material-symbols-outlined text-[14px]">refresh</span>
+<span>Scan</span>
+</button>
+</div>
+<div class="space-y-space-xs" id="device-list">
+<!-- Device 1: Sony SRS-XV800 (Saved) -->
+<div class="bg-surface-container hover:bg-surface-container-high rounded-xl p-space-sm flex items-center justify-between transition-all shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface-variant flex-shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[20px]">speaker_group</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="text-body-md font-body-md text-on-surface font-medium truncate">Sony SRS-XV800</span>
+<span class="text-label-caps font-label-caps uppercase px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface-variant">Saved</span>
+</div>
+<span class="text-label-caps font-label-caps text-on-surface-variant block mt-0.5">Party Box • Omnidirectional PA</span>
+</div>
+</div>
+<button class="device-connect-btn px-3 py-1.5 bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container text-on-surface text-telemetry-sm font-telemetry-sm rounded-lg transition-all active:scale-95 flex-shrink-0 font-medium">
+          Connect
+        </button>
+</div>
+<!-- Device 2: Bose S1 Pro+ (Ready to Pair) -->
+<div class="bg-surface-container hover:bg-surface-container-high rounded-xl p-space-sm flex items-center justify-between transition-all shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary-fixed-dim flex-shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[20px]">volume_up</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="text-body-md font-body-md text-on-surface font-medium truncate">Bose S1 Pro+</span>
+<span class="text-label-caps font-label-caps uppercase px-1.5 py-0.2 rounded bg-primary-container/20 text-primary-fixed-dim">Ready</span>
+</div>
+<span class="text-label-caps font-label-caps text-on-surface-variant block mt-0.5">Compact Wireless PA • -58 dBm</span>
+</div>
+</div>
+<button class="device-connect-btn px-3 py-1.5 bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container text-on-surface text-telemetry-sm font-telemetry-sm rounded-lg transition-all active:scale-95 flex-shrink-0 font-medium">
+          Pair
+        </button>
+</div>
+<!-- Device 3: Marshall Woburn III (In Range) -->
+<div class="bg-surface-container hover:bg-surface-container-high rounded-xl p-space-sm flex items-center justify-between transition-all shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface-variant flex-shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[20px]">radio</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="text-body-md font-body-md text-on-surface font-medium truncate">Marshall Woburn III</span>
+</div>
+<span class="text-label-caps font-label-caps text-on-surface-variant block mt-0.5">Living Stage Monitor • aptX</span>
+</div>
+</div>
+<button class="device-connect-btn px-3 py-1.5 bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container text-on-surface text-telemetry-sm font-telemetry-sm rounded-lg transition-all active:scale-95 flex-shrink-0 font-medium">
+          Pair
+        </button>
+</div>
+</div>
+</div>
+<!-- Auracast Information Banner for Karaoke Hosts -->
+<div class="px-margin pt-space-xs">
+<div class="bg-gradient-to-r from-secondary-container/40 via-surface-container to-surface-container p-space-md rounded-xl shadow-md flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-secondary flex-shrink-0 mt-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">podcasts</span>
+</div>
+<div class="min-w-0 flex-1">
+<h4 class="text-body-md font-body-md font-semibold text-secondary-fixed">Unlimited Crowd Sync</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5 leading-relaxed">
+          Switch to Auracast to broadcast low-latency stage audio directly to unlimited party speakers, wireless in-ear monitors, and audience phones simultaneously.
+        </p>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function () {
+    // Latency Range Slider Interactive sync
+    const slider = document.getElementById('latency-range');
+    const display = document.getElementById('latency-val');
+    const fill = document.getElementById('slider-fill');
+
+    if (slider && display && fill) {
+      const updateSlider = () => {
+        const val = parseInt(slider.value, 10);
+        display.textContent = (val > 0 ? '+' : '') + val;
+        // Map from range (-50 to 150) -> total 200 units
+        const percent = ((val - (-50)) / 200) * 100;
+        fill.style.width = Math.min(Math.max(percent, 0), 100) + '%';
+      };
+      slider.addEventListener('input', updateSlider);
+      updateSlider();
+    }
+
+    // Acoustic Chirp Auto-calibration micro-interaction
+    const chirpBtn = document.getElementById('chirp-btn');
+    const chirpStatus = document.getElementById('chirp-status');
+    const chirpIcon = document.getElementById('chirp-icon-wrap');
+
+    if (chirpBtn && chirpStatus && chirpIcon) {
+      chirpBtn.addEventListener('click', () => {
+        chirpBtn.disabled = true;
+        chirpBtn.textContent = 'Pinging...';
+        chirpIcon.classList.add('scale-125', 'bg-primary-container', 'text-on-primary-container');
+        chirpStatus.textContent = 'Emitting 1.2kHz acoustic chirp...';
+
+        setTimeout(() => {
+          chirpStatus.textContent = 'Analyzing microphone acoustic return...';
+        }, 600);
+
+        setTimeout(() => {
+          if (slider) {
+            slider.value = 14;
+            slider.dispatchEvent(new Event('input'));
+          }
+          chirpStatus.textContent = 'Calibrated! Measured propagation: 14ms';
+          chirpBtn.textContent = 'Aligned';
+          chirpIcon.classList.remove('scale-125', 'bg-primary-container', 'text-on-primary-container');
+
+          setTimeout(() => {
+            chirpBtn.disabled = false;
+            chirpBtn.textContent = 'Calibrate';
+          }, 2000);
+        }, 1400);
+      });
+    }
+
+    // Buffer Size selector interaction
+    const bufferBtns = document.querySelectorAll('.buffer-btn');
+    bufferBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        bufferBtns.forEach(b => {
+          b.className = 'buffer-btn py-2 px-1.5 bg-surface-container-lowest hover:bg-surface-container-highest rounded-lg flex flex-col items-center transition-all shadow-inner text-left';
+          const title = b.querySelector('span:first-child');
+          const sub = b.querySelector('span:last-child');
+          if (title) title.className = 'text-telemetry-sm font-telemetry-sm font-bold text-on-surface';
+          if (sub) sub.className = 'text-label-caps font-label-caps text-on-surface-variant';
+        });
+
+        btn.className = 'buffer-btn py-2 px-1.5 bg-primary-container/20 rounded-lg flex flex-col items-center transition-all shadow-[inset_0_1px_2px_rgba(0,242,254,0.3)] text-left';
+        const activeTitle = btn.querySelector('span:first-child');
+        const activeSub = btn.querySelector('span:last-child');
+        if (activeTitle) activeTitle.className = 'text-telemetry-sm font-telemetry-sm font-bold text-primary-container';
+        if (activeSub) activeSub.className = 'text-label-caps font-label-caps text-primary';
+      });
+    });
+
+    // Denoise Toggle Switch
+    const denoiseToggle = document.getElementById('denoise-toggle');
+    const denoiseThumb = document.getElementById('denoise-thumb');
+    let isDenoiseActive = true;
+
+    if (denoiseToggle && denoiseThumb) {
+      denoiseToggle.addEventListener('click', () => {
+        isDenoiseActive = !isDenoiseActive;
+        if (isDenoiseActive) {
+          denoiseToggle.className = 'w-12 h-6 rounded-full bg-secondary-container transition-colors relative flex items-center p-0.5 active:scale-95 flex-shrink-0';
+          denoiseThumb.className = 'w-5 h-5 rounded-full bg-secondary shadow-md transform translate-x-6 transition-transform';
+        } else {
+          denoiseToggle.className = 'w-12 h-6 rounded-full bg-surface-container-highest transition-colors relative flex items-center p-0.5 active:scale-95 flex-shrink-0';
+          denoiseThumb.className = 'w-5 h-5 rounded-full bg-on-surface-variant shadow-md transform translate-x-0 transition-transform';
+        }
+      });
+    }
+
+    // Audio Mode switch (Single Master vs Auracast)
+    const modeSingle = document.getElementById('mode-single');
+    const modeAuracast = document.getElementById('mode-auracast');
+
+    if (modeSingle && modeAuracast) {
+      modeSingle.addEventListener('click', () => {
+        modeSingle.className = 'flex-1 py-2 rounded-lg text-telemetry-sm font-telemetry-sm tracking-wide transition-all bg-surface-container-high text-primary-container shadow-sm flex items-center justify-center gap-1.5';
+        modeAuracast.className = 'flex-1 py-2 rounded-lg text-telemetry-sm font-telemetry-sm tracking-wide transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5';
+      });
+
+      modeAuracast.addEventListener('click', () => {
+        modeAuracast.className = 'flex-1 py-2 rounded-lg text-telemetry-sm font-telemetry-sm tracking-wide transition-all bg-secondary-container text-secondary shadow-sm flex items-center justify-center gap-1.5';
+        modeSingle.className = 'flex-1 py-2 rounded-lg text-telemetry-sm font-telemetry-sm tracking-wide transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5';
+      });
+    }
+
+    // Test tone button feedback
+    const testToneBtn = document.getElementById('test-tone-btn');
+    const toneLabel = document.getElementById('tone-label');
+    if (testToneBtn && toneLabel) {
+      testToneBtn.addEventListener('click', () => {
+        toneLabel.textContent = 'Testing L/R...';
+        testToneBtn.classList.add('bg-primary-container', 'text-on-primary-container');
+        setTimeout(() => {
+          toneLabel.textContent = 'Ping Tone';
+          testToneBtn.classList.remove('bg-primary-container', 'text-on-primary-container');
+        }, 1200);
+      });
+    }
+
+    // Scan refresh button animation
+    const refreshBtn = document.getElementById('refresh-devices-btn');
+    if (refreshBtn) {
+      refreshBtn.addEventListener('click', () => {
+        const icon = refreshBtn.querySelector('.material-symbols-outlined');
+        if (icon) icon.classList.add('animate-spin');
+        setTimeout(() => {
+          if (icon) icon.classList.remove('animate-spin');
+        }, 1000);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.6)]" data-active-classes="text-primary-container bg-surface-container-high/60 shadow-[inset_0_1px_2px_rgba(0,242,254,0.15)]"><div class="flex justify-around items-center h-20 px-space-xs"><a class="flex flex-col items-center justify-center gap-1 w-16 h-14 rounded-xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="live-mic" href="#"><span class="material-symbols-outlined text-[24px]">mic</span><span class="text-label-caps font-label-caps tracking-wider">LIVE MIC</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-14 rounded-xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="equalizer" href="#"><span class="material-symbols-outlined text-[24px]">equalizer</span><span class="text-label-caps font-label-caps tracking-wider">EQUALIZER</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-14 rounded-xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="fx-studio" href="#"><span class="material-symbols-outlined text-[24px]">graphic_eq</span><span class="text-label-caps font-label-caps tracking-wider">FX STUDIO</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-16 h-14 rounded-xl transition-all active:scale-95 text-primary-container bg-surface-container-high/60 shadow-[inset_0_1px_2px_rgba(0,242,254,0.15)]" data-path="devices" href="#"><span class="material-symbols-outlined text-[24px]">settings_input_antenna</span><span class="text-label-caps font-label-caps tracking-wider">DEVICES</span></a></div></nav></body></html>

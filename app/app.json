@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "EchoMic Pro",
+    "slug": "echomic-pro",
+    "scheme": "echomic",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0e141c",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.sanket.echomicpro",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "EchoMic uses your microphone to sing live through your speaker."
+      }
+    },
+    "android": {
+      "package": "com.sanket.echomicpro",
+      "permissions": ["RECORD_AUDIO", "MODIFY_AUDIO_SETTINGS"],
+      "adaptiveIcon": {
+        "backgroundColor": "#0e141c",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "react-native-audio-api",
+        {
+          "iosMicrophonePermission": "EchoMic uses your microphone to sing live through your speaker.",
+          "iosBackgroundMode": true,
+          "androidPermissions": [
+            "android.permission.RECORD_AUDIO",
+            "android.permission.MODIFY_AUDIO_SETTINGS",
+            "android.permission.FOREGROUND_SERVICE",
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            "android.permission.FOREGROUND_SERVICE_MICROPHONE"
+          ],
+          "androidForegroundService": true,
+          "androidFSTypes": ["mediaPlayback", "microphone"]
+        }
+      ],
+      "expo-font"
+    ]
+  }
+}

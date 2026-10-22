@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=JetBrains+Mono:wght@500;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0e141c;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#3a494b", "tertiary-fixed-dim": "#ffb3b5", "on-primary-container": "#006a70", "on-secondary-container": "#fe8bf3", "inverse-primary": "#00696f", "surface": "#0e141c", "surface-container-lowest": "#090f16", "on-primary-fixed": "#002022", "on-error": "#690005", "inverse-surface": "#dde3ee", "on-tertiary": "#680018", "error": "#ffb4ab", "surface-container-low": "#161c24", "surface-bright": "#343a42", "surface-container-highest": "#2f353e", "tertiary-container": "#ffcfd0", "primary-fixed-dim": "#00dce6", "on-tertiary-fixed-variant": "#920026", "surface-container-high": "#242a33", "secondary-container": "#7d137b", "surface-tint": "#00dce6", "tertiary": "#fff5f4", "on-secondary": "#5b005b", "surface-variant": "#2f353e", "secondary-fixed-dim": "#ffabf3", "surface-container": "#1a2028", "on-surface-variant": "#b9cacb", "on-secondary-fixed": "#380038", "surface-dim": "#0e141c", "on-tertiary-fixed": "#40000c", "secondary-fixed": "#ffd7f5", "on-background": "#dde3ee", "on-surface": "#dde3ee", "on-secondary-fixed-variant": "#7d137b", "on-tertiary-container": "#ba1a39", "outline": "#849495", "primary": "#e0fdff", "inverse-on-surface": "#2b3139", "on-primary-fixed-variant": "#004f53", "primary-container": "#00f2fe", "secondary": "#ffabf3", "error-container": "#93000a", "primary-fixed": "#6ff6ff", "on-error-container": "#ffdad6", "background": "#0e141c", "on-primary": "#00373a", "tertiary-fixed": "#ffdada" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.25rem", "gutter-sm": "0.5rem", "space-xl": "2rem", "margin-lg": "1.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1rem" }, "fontFamily": { "body-lg": ["Inter"], "telemetry-md": ["JetBrains Mono"], "headline-lg": ["Space Grotesk"], "headline-xl": ["Space Grotesk"], "headline-xl-mobile": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "label-caps": ["Inter"], "body-sm": ["Inter"], "body-md": ["Inter"], "telemetry-lg": ["JetBrains Mono"], "telemetry-sm": ["JetBrains Mono"] }, "fontSize": { "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "telemetry-md": ["14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-caps": ["10px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "telemetry-lg": ["20px", { "lineHeight": "24px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "telemetry-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.5)] pt-safe"><div class="h-20 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="EchoMic Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XdxHdlRDfH6PC3CC5aK4CfZSSuf7A5dIyifUdTHBLf3qcazD2l_ZOPfRZbbCxhsctKHU38cVtmq2Z2Cm9sMFe1ACXx1W6Odv1_hxaqGoND6bQXZLVJAYagMOq9ulUoe1fCd2ircY-I6bSwdFm-C0Xw860BZxRE8F2FbA_Q_N96SxzRj_q2dqvibeFHqEcRrREqACYH3VCBG64cRwWl3C2Gt3PiQEJlrjWAWETTcMRJE5mkpJdNEY_Dnw"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="text-headline-sm font-headline-sm tracking-tight text-primary leading-tight truncate">EchoMic Pro</span><span class="text-label-caps font-label-caps uppercase px-1 py-0.5 rounded bg-primary-container/20 text-primary-container tracking-wider">LIVE</span></div><span class="text-telemetry-sm font-telemetry-sm text-on-surface-variant truncate uppercase tracking-widest leading-none">Live Mic</span></div></div><div class="flex items-center gap-space-xs"><div class="hidden sm:flex items-center bg-surface-container-high px-space-sm py-1 rounded-full gap-space-xs shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container shadow-[0_0_8px_#00F2FE]"></span></span><span class="text-telemetry-sm font-telemetry-sm text-on-surface truncate max-w-[120px]">JBL PartyBox 310</span><span class="bg-surface-container-lowest text-primary-fixed-dim text-telemetry-sm font-telemetry-sm px-1.5 py-0.5 rounded">11ms aptX-LL</span></div><div class="flex sm:hidden items-center bg-surface-container-high px-2 py-1 rounded-full gap-1.5 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container shadow-[0_0_8px_#00F2FE]"></span></span><span class="text-telemetry-sm font-telemetry-sm text-primary-fixed-dim font-bold">11ms</span></div><div class="relative flex-shrink-0 pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary-container/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxJxtVdvWPHdmb_oP8VFgVRbkXC7gYLWJVC_5mnJmL8qYhGJj8c7iO2jVKUbK1EtPFXXZIcByGhRPqaklTGLEr5GrcCr3354Lk5BdoybQaGNS1tJPIQGKGUkzu0L8Gt5KSqFg_MDgxy6NRuuWb3tkl511L403AVRhyyQsPKnmGREIyLQTJmbhb8RfMAsYjOQHcrJGYalOLG-tKjs-EsdvqFlFnsECmm4zQUdbgbhwHIfFN5DHG3G3t"/><div class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-primary-container rounded-full ring-2 ring-surface"></div></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-20 bg-surface"><div class="flex flex-col w-full pb-6 px-margin gap-space-md select-none">
+<!-- Telemetry Sub-Bar / Engine Status -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-xs shadow-[inset_0_2px_4px_rgba(0,0,0,0.8)]">
+<div class="flex items-center justify-between px-space-sm py-1.5 gap-space-xs text-on-surface-variant">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="flex h-1.5 w-1.5 rounded-full bg-primary-container shadow-[0_0_6px_#00F2FE]"></span>
+<span class="text-telemetry-sm font-telemetry-sm text-primary-fixed-dim uppercase tracking-wider truncate">aptX-LL: 9.4ms</span>
+</div>
+<div class="hidden sm:inline-block text-telemetry-sm font-telemetry-sm text-on-surface-variant truncate">48kHz / 24-bit</div>
+<div class="flex items-center gap-1.5 bg-surface-container-high px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px] text-primary-container" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="text-telemetry-sm font-telemetry-sm text-primary uppercase font-bold tracking-tight">Notch Active</span>
+</div>
+</div>
+</div>
+<!-- Centerpiece: Tactile Circular ON AIR Live Mic Station -->
+<div class="relative w-full rounded-2xl bg-surface-container-low p-space-md flex flex-col items-center justify-center overflow-hidden shadow-xl">
+<!-- Background Radiant Ripple SVG -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40">
+<svg class="w-72 h-72 animate-[spin_30s_linear_infinite]" fill="none" viewbox="0 0 200 200">
+<circle class="text-primary-container/20" cx="100" cy="100" r="90" stroke="currentColor" stroke-dasharray="4 6" stroke-width="1"></circle>
+<circle class="text-primary-container/30" cx="100" cy="100" r="70" stroke="currentColor" stroke-dasharray="8 8" stroke-width="1.5"></circle>
+<circle class="text-primary-container/40" cx="100" cy="100" r="50" stroke="currentColor" stroke-width="1"></circle>
+</svg>
+</div>
+<!-- Active Transmit Beacon -->
+<div class="flex items-center gap-space-xs mb-space-sm z-10">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-80"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-error shadow-[0_0_8px_#ffb4ab]"></span>
+</span>
+<span class="text-label-caps font-label-caps uppercase text-primary tracking-widest">TRANSMITTING • JBL PARTYBOX 310</span>
+</div>
+<!-- Main Button Housing (Beveled hardware ring) -->
+<div class="relative flex items-center justify-center p-3 rounded-full bg-surface-container-lowest shadow-[inset_0_4px_12px_rgba(0,0,0,0.9)] z-10">
+<!-- Outer Pulsing Glow Wave -->
+<div class="absolute -inset-1 rounded-full bg-primary-container/20 blur-md transition-all duration-300" id="glow-ring"></div>
+<!-- Tactile Hardware Button Cap -->
+<button class="relative group w-36 h-36 rounded-full bg-surface-container-high active:scale-95 transition-all duration-200 flex flex-col items-center justify-center shadow-[0_12px_24px_rgba(0,0,0,0.8),inset_0_2px_4px_rgba(255,255,255,0.15)] focus:outline-none" id="live-mic-btn">
+<!-- Inner status ring -->
+<div class="absolute inset-2 rounded-full border-2 border-primary-container/60 shadow-[0_0_16px_rgba(0,242,254,0.4)] flex items-center justify-center bg-gradient-to-b from-surface-container-highest to-surface-container">
+<div class="flex flex-col items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[38px] text-primary-container transition-transform duration-200 group-hover:scale-110" id="mic-icon" style="font-variation-settings: 'FILL' 1;">mic</span>
+<span class="text-headline-sm font-headline-sm tracking-tight text-primary font-bold" id="mic-state-label">ON AIR</span>
+<span class="text-label-caps font-label-caps text-primary-fixed-dim uppercase tracking-wider">TAP TO MUTE</span>
+</div>
+</div>
+</button>
+</div>
+<!-- Live Waveform Dynamic Monitor Visualizer -->
+<div class="w-full max-w-xs mt-space-md z-10 flex items-center justify-center gap-1 h-8 px-space-sm bg-surface-container-lowest rounded-xl shadow-[inset_0_2px_4px_rgba(0,0,0,0.7)]">
+<div class="w-1 bg-primary-container rounded-full animate-pulse h-3"></div>
+<div class="w-1 bg-primary-container rounded-full animate-pulse h-6"></div>
+<div class="w-1 bg-primary-container rounded-full animate-pulse h-7"></div>
+<div class="w-1 bg-primary-container rounded-full animate-pulse h-4"></div>
+<div class="w-1 bg-primary-container rounded-full animate-pulse h-5"></div>
+<div class="w-1 bg-primary-container rounded-full animate-pulse h-7"></div>
+<div class="w-1 bg-primary-container rounded-full animate-pulse h-3"></div>
+<div class="w-1 bg-primary-container rounded-full animate-pulse h-6"></div>
+<div class="w-1 bg-primary-container rounded-full animate-pulse h-4"></div>
+<div class="w-1 bg-primary-container rounded-full animate-pulse h-8"></div>
+<div class="w-1 bg-primary-container rounded-full animate-pulse h-5"></div>
+<div class="w-1 bg-primary-container rounded-full animate-pulse h-3"></div>
+<div class="w-1 bg-primary-container rounded-full animate-pulse h-6"></div>
+<div class="w-1 bg-primary-container rounded-full animate-pulse h-2"></div>
+</div>
+</div>
+<!-- Dual Real-time VU Meter Bar -->
+<div class="w-full bg-surface-container rounded-xl p-space-sm shadow-md flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-telemetry-sm font-telemetry-sm px-1">
+<span class="text-on-surface-variant font-bold uppercase">DUAL VU MONITOR</span>
+<div class="flex items-center gap-space-sm text-label-caps font-label-caps text-on-surface-variant">
+<span>-48dB</span>
+<span>-24</span>
+<span>-12</span>
+<span>-6</span>
+<span class="text-primary-container">0dB</span>
+<span class="text-error font-bold">+6dB</span>
+</div>
+</div>
+<!-- Left Channel Meter -->
+<div class="flex items-center gap-2">
+<span class="text-label-caps font-label-caps w-3 text-on-surface-variant font-bold">L</span>
+<div class="flex-1 h-3.5 bg-surface-container-lowest rounded-sm p-0.5 shadow-[inset_0_1px_3px_rgba(0,0,0,0.8)] flex gap-[2px]">
+<!-- 16 Segment L Meter Bar -->
+<span class="flex-1 bg-primary-container/90 rounded-none shadow-[0_0_4px_#00F2FE]"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none shadow-[0_0_4px_#00F2FE]"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none"></span>
+<span class="flex-1 bg-surface-container-high rounded-none"></span>
+<span class="flex-1 bg-surface-container-high rounded-none"></span>
+<span class="flex-1 bg-surface-container-high rounded-none"></span>
+<span class="flex-1 bg-surface-container-high rounded-none"></span>
+</div>
+<span class="text-telemetry-sm font-telemetry-sm text-primary w-9 text-right font-semibold">-4.2dB</span>
+</div>
+<!-- Right Channel Meter -->
+<div class="flex items-center gap-2">
+<span class="text-label-caps font-label-caps w-3 text-on-surface-variant font-bold">R</span>
+<div class="flex-1 h-3.5 bg-surface-container-lowest rounded-sm p-0.5 shadow-[inset_0_1px_3px_rgba(0,0,0,0.8)] flex gap-[2px]">
+<!-- 16 Segment R Meter Bar -->
+<span class="flex-1 bg-primary-container/90 rounded-none shadow-[0_0_4px_#00F2FE]"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none shadow-[0_0_4px_#00F2FE]"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none"></span>
+<span class="flex-1 bg-primary-container/90 rounded-none"></span>
+<span class="flex-1 bg-surface-container-high rounded-none"></span>
+<span class="flex-1 bg-surface-container-high rounded-none"></span>
+<span class="flex-1 bg-surface-container-high rounded-none"></span>
+<span class="flex-1 bg-surface-container-high rounded-none"></span>
+<span class="flex-1 bg-surface-container-high rounded-none"></span>
+<span class="flex-1 bg-surface-container-high rounded-none"></span>
+</div>
+<span class="text-telemetry-sm font-telemetry-sm text-primary w-9 text-right font-semibold">-5.8dB</span>
+</div>
+</div>
+<!-- Quick Vocal Preset Pill Selector -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-1">
+<span class="text-label-caps font-label-caps uppercase text-on-surface-variant tracking-wider">VOCAL PRESET STRIP</span>
+<span class="text-telemetry-sm font-telemetry-sm text-primary-fixed-dim">DSP PROFILE</span>
+</div>
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1">
+<button class="preset-pill px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary-fixed font-body-sm text-body-sm font-bold shadow-[0_0_12px_rgba(0,242,254,0.4)] whitespace-nowrap active:scale-95 transition-all">Karaoke Pop</button>
+<button class="preset-pill px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface font-body-sm text-body-sm whitespace-nowrap active:scale-95 transition-all">Arena Rock</button>
+<button class="preset-pill px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface font-body-sm text-body-sm whitespace-nowrap active:scale-95 transition-all">R&amp;B Warmth</button>
+<button class="preset-pill px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface font-body-sm text-body-sm whitespace-nowrap active:scale-95 transition-all">Robo Echo</button>
+<button class="preset-pill px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface font-body-sm text-body-sm whitespace-nowrap active:scale-95 transition-all">Clean Lead</button>
+</div>
+</div>
+<!-- Quick-Faders Performance Console -->
+<div class="grid grid-cols-2 gap-space-sm w-full">
+<!-- Channel 1: Master Mic Gain Linear Slider -->
+<div class="bg-surface-container rounded-xl p-space-sm flex flex-col justify-between shadow-md">
+<div class="flex items-center justify-between">
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase font-bold">MIC GAIN</span>
+<span class="text-telemetry-md font-telemetry-md text-primary font-bold" id="gain-val">+12.0 dB</span>
+</div>
+<div class="relative flex items-center justify-center my-3 h-28">
+<!-- Sunken Fader Trough -->
+<div class="w-3 h-full bg-surface-container-lowest rounded-full shadow-[inset_0_2px_4px_rgba(0,0,0,0.8)] relative flex flex-col justify-between items-center py-1">
+<div class="w-1.5 h-0.5 bg-outline-variant"></div>
+<div class="w-1.5 h-0.5 bg-outline-variant"></div>
+<div class="w-1.5 h-0.5 bg-outline-variant"></div>
+<div class="w-1.5 h-0.5 bg-outline-variant"></div>
+<!-- Fader Handle Block -->
+<div class="absolute top-5 w-10 h-7 bg-surface-bright rounded shadow-[0_4px_8px_rgba(0,0,0,0.6),inset_0_1px_1px_rgba(255,255,255,0.2)] flex items-center justify-center cursor-pointer active:scale-105">
+<div class="w-6 h-1 bg-primary-container shadow-[0_0_6px_#00F2FE] rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="flex justify-between text-telemetry-sm font-telemetry-sm text-on-surface-variant">
+<span>0dB</span>
+<span>+24dB</span>
+</div>
+</div>
+<!-- Channel 2: Bluetooth Master Volume & Quick Mute -->
+<div class="bg-surface-container rounded-xl p-space-sm flex flex-col justify-between shadow-md">
+<div class="flex items-center justify-between">
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase font-bold">BT OUTPUT</span>
+<span class="text-telemetry-md font-telemetry-md text-primary font-bold" id="vol-val">85%</span>
+</div>
+<div class="relative flex items-center justify-center my-3 h-28">
+<!-- Sunken Fader Trough -->
+<div class="w-3 h-full bg-surface-container-lowest rounded-full shadow-[inset_0_2px_4px_rgba(0,0,0,0.8)] relative flex flex-col justify-between items-center py-1">
+<div class="w-1.5 h-0.5 bg-outline-variant"></div>
+<div class="w-1.5 h-0.5 bg-outline-variant"></div>
+<div class="w-1.5 h-0.5 bg-outline-variant"></div>
+<div class="w-1.5 h-0.5 bg-outline-variant"></div>
+<!-- Fader Handle Block -->
+<div class="absolute top-4 w-10 h-7 bg-surface-bright rounded shadow-[0_4px_8px_rgba(0,0,0,0.6),inset_0_1px_1px_rgba(255,255,255,0.2)] flex items-center justify-center cursor-pointer active:scale-105">
+<div class="w-6 h-1 bg-primary-fixed-dim shadow-[0_0_6px_#00dce6] rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-telemetry-sm font-telemetry-sm text-on-surface-variant">MASTER</span>
+<button class="bg-surface-container-high px-2 py-0.5 rounded text-label-caps font-label-caps text-primary uppercase active:scale-95 transition-all" id="bt-mute-btn">MUTE</button>
+</div>
+</div>
+</div>
+<!-- Rotary Dials Deck: Reverb Dry/Wet & Flanger Sweep -->
+<div class="grid grid-cols-2 gap-space-sm w-full">
+<!-- Rotary 1: Vocal Reverb Knob -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col items-center justify-between shadow-md">
+<div class="w-full flex items-center justify-between mb-2">
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase font-bold">REVERB WET</span>
+<span class="text-telemetry-sm font-telemetry-sm text-primary-fixed-dim">HALL 2</span>
+</div>
+<!-- Dial Face -->
+<div class="relative w-20 h-20 flex items-center justify-center cursor-pointer active:scale-95 transition-transform">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-lowest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-primary-container shadow-[0_0_8px_#00F2FE]" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="34, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<div class="absolute inset-2 bg-surface-container-high rounded-full shadow-[inset_0_2px_4px_rgba(0,0,0,0.6),0_2px_4px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center">
+<span class="text-telemetry-md font-telemetry-md text-primary font-bold">34%</span>
+</div>
+</div>
+<span class="text-label-caps font-label-caps text-on-surface-variant mt-2 uppercase tracking-wider">PRE-DELAY: 18ms</span>
+</div>
+<!-- Rotary 2: Flanger Effect Intensity Wheel -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col items-center justify-between shadow-md">
+<div class="w-full flex items-center justify-between mb-2">
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase font-bold">FLANGER SWEEP</span>
+<span class="text-telemetry-sm font-telemetry-sm text-secondary">SYNC 1/4</span>
+</div>
+<!-- Dial Face -->
+<div class="relative w-20 h-20 flex items-center justify-center cursor-pointer active:scale-95 transition-transform">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-lowest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-secondary shadow-[0_0_8px_#ffabf3]" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="48, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<div class="absolute inset-2 bg-surface-container-high rounded-full shadow-[inset_0_2px_4px_rgba(0,0,0,0.6),0_2px_4px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center">
+<span class="text-telemetry-md font-telemetry-md text-secondary font-bold">48%</span>
+</div>
+</div>
+<span class="text-label-caps font-label-caps text-on-surface-variant mt-2 uppercase tracking-wider">DEPTH: 0.82Hz</span>
+</div>
+</div>
+<!-- Anti-Feedback Notch Emergency Bar & Stage Safety -->
+<div class="w-full bg-surface-container rounded-xl p-space-sm flex items-center justify-between shadow-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">graphic_eq</span>
+</div>
+<div class="flex flex-col">
+<span class="text-body-md font-body-md text-on-surface font-semibold leading-tight">Adaptive Anti-Feedback</span>
+<span class="text-telemetry-sm font-telemetry-sm text-on-surface-variant">Auto-detects squeal at 4.2kHz</span>
+</div>
+</div>
+<!-- Hardware Toggle Switch -->
+<button class="relative inline-flex h-7 w-12 items-center rounded-full bg-primary-container transition-colors focus:outline-none" id="notch-toggle">
+<span class="inline-block h-5 w-5 transform rounded-full bg-on-primary-fixed shadow-md transition-transform translate-x-6" id="notch-thumb"></span>
+</button>
+</div>
+</div>
+<script>
+  (function() {
+    const liveMicBtn = document.getElementById('live-mic-btn');
+    const micIcon = document.getElementById('mic-icon');
+    const micStateLabel = document.getElementById('mic-state-label');
+    const glowRing = document.getElementById('glow-ring');
+    let isLive = true;
+
+    liveMicBtn.addEventListener('click', () => {
+      isLive = !isLive;
+      if (isLive) {
+        micStateLabel.textContent = 'ON AIR';
+        micStateLabel.className = 'text-headline-sm font-headline-sm tracking-tight text-primary font-bold';
+        micIcon.textContent = 'mic';
+        micIcon.className = 'material-symbols-outlined text-[38px] text-primary-container transition-transform duration-200 group-hover:scale-110';
+        glowRing.className = 'absolute -inset-1 rounded-full bg-primary-container/20 blur-md transition-all duration-300';
+      } else {
+        micStateLabel.textContent = 'MUTED';
+        micStateLabel.className = 'text-headline-sm font-headline-sm tracking-tight text-error font-bold';
+        micIcon.textContent = 'mic_off';
+        micIcon.className = 'material-symbols-outlined text-[38px] text-error transition-transform duration-200 group-hover:scale-110';
+        glowRing.className = 'absolute -inset-1 rounded-full bg-error/20 blur-md transition-all duration-300';
+      }
+    });
+
+    const pills = document.querySelectorAll('.preset-pill');
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => {
+          p.className = 'preset-pill px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface font-body-sm text-body-sm whitespace-nowrap active:scale-95 transition-all';
+        });
+        pill.className = 'preset-pill px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary-fixed font-body-sm text-body-sm font-bold shadow-[0_0_12px_rgba(0,242,254,0.4)] whitespace-nowrap active:scale-95 transition-all';
+      });
+    });
+
+    const notchToggle = document.getElementById('notch-toggle');
+    const notchThumb = document.getElementById('notch-thumb');
+    let notchActive = true;
+    notchToggle.addEventListener('click', () => {
+      notchActive = !notchActive;
+      if (notchActive) {
+        notchToggle.className = 'relative inline-flex h-7 w-12 items-center rounded-full bg-primary-container transition-colors focus:outline-none';
+        notchThumb.className = 'inline-block h-5 w-5 transform rounded-full bg-on-primary-fixed shadow-md transition-transform translate-x-6';
+      } else {
+        notchToggle.className = 'relative inline-flex h-7 w-12 items-center rounded-full bg-surface-container-highest transition-colors focus:outline-none';
+        notchThumb.className = 'inline-block h-5 w-5 transform rounded-full bg-on-surface-variant shadow-md transition-transform translate-x-1';
+      }
+    });
+
+    const btMuteBtn = document.getElementById('bt-mute-btn');
+    const volVal = document.getElementById('vol-val');
+    let btMuted = false;
+    btMuteBtn.addEventListener('click', () => {
+      btMuted = !btMuted;
+      if (btMuted) {
+        btMuteBtn.className = 'bg-error-container text-on-error-container px-2 py-0.5 rounded text-label-caps font-label-caps uppercase active:scale-95 transition-all';
+        volVal.textContent = 'MUTED';
+        volVal.className = 'text-telemetry-md font-telemetry-md text-error font-bold';
+      } else {
+        btMuteBtn.className = 'bg-surface-container-high px-2 py-0.5 rounded text-label-caps font-label-caps text-primary uppercase active:scale-95 transition-all';
+        volVal.textContent = '85%';
+        volVal.className = 'text-telemetry-md font-telemetry-md text-primary font-bold';
+      }
+    });
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.6)]" data-active-classes="text-primary-container bg-surface-container-high/60 shadow-[inset_0_1px_2px_rgba(0,242,254,0.15)]"><div class="flex justify-around items-center h-20 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-16 h-14 rounded-xl transition-all active:scale-95 text-primary-container bg-surface-container-high/60 shadow-[inset_0_1px_2px_rgba(0,242,254,0.15)]" data-path="live-mic" href="#"><span class="material-symbols-outlined text-[24px]">mic</span><span class="text-label-caps font-label-caps tracking-wider">LIVE MIC</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-14 rounded-xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="equalizer" href="#"><span class="material-symbols-outlined text-[24px]">equalizer</span><span class="text-label-caps font-label-caps tracking-wider">EQUALIZER</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-14 rounded-xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="fx-studio" href="#"><span class="material-symbols-outlined text-[24px]">graphic_eq</span><span class="text-label-caps font-label-caps tracking-wider">FX STUDIO</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-14 rounded-xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="devices" href="#"><span class="material-symbols-outlined text-[24px]">settings_input_antenna</span><span class="text-label-caps font-label-caps tracking-wider">DEVICES</span></a></div></nav></body></html>
